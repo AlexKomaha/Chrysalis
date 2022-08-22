@@ -10,9 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_22_055314) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_22_063815) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "emotions", force: :cascade do |t|
+    t.integer "emotion_level"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_emotions_on_user_id"
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "journals", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_journals_on_user_id"
+  end
+
+  create_table "user_goals", force: :cascade do |t|
+    t.string "status"
+    t.string "description"
+    t.bigint "user_id", null: false
+    t.bigint "goal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["goal_id"], name: "index_user_goals_on_goal_id"
+    t.index ["user_id"], name: "index_user_goals_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_22_055314) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "emotions", "users"
+  add_foreign_key "journals", "users"
+  add_foreign_key "user_goals", "goals"
+  add_foreign_key "user_goals", "users"
 end
