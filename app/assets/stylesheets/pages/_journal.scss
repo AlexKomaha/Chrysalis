@@ -3,12 +3,7 @@
   justify-content: space-between;
 }
 
-.journal-wrapper {
-  padding-top: 100px;
-  padding-bottom: 30px;
-}
-
-.month {
+.journal {
   width: 100%;
   background-color: white;
   margin: 0.8em 0px;
@@ -16,11 +11,24 @@
   padding: 5px 35px;
 }
 
-.month-box {
+.journal-box {
   background-color: #D5DCF9;
-
 }
 
-.journal-each-year {
+.journals {
+  margin-bottom: 20px;
+}
+
+.journal-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.content-wrapper {
+  border : 1px solid gray;
+  width: 60%;
+  justify-content: center;
+  padding: 1em;
   margin-bottom: 20px;
 }

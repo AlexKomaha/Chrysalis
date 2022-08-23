@@ -1,0 +1,12 @@
+<div class ="d-flex align-items-end flex-column">
+  <%= link_to "Back", journals_path %>
+</div>
+<div class="container d-flex justify-content-between mt-3 mb-3">
+  <h2>Journal</h2>
+  <h2 class="date">Date</h2>
+</div>
+<div class="container d-flex justify-content-center">
+  <div class="content-wrapper">
+    <%= @journal.content %>
+  </div>
+</div>
