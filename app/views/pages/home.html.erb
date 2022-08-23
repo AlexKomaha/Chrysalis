@@ -1,8 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(#);">
+  <%= image_tag "logo.png", class: "banner-logo" %>
   <div class="container">
     <h1>Chrysalis</h1>
     <p>Achieve goals, build habits, stay on track and become a better you today</p>
-    <a class="btn btn-flat" href="#">Get started</a>
+    <%= link_to "Get started", dashboard_path, class: "btn btn-light rounded mt-2" %>
   </div>
 </div>
 <div class="middle-content">
@@ -20,6 +21,5 @@
 <div class="bottom-content">
   <div class="container">
     <h2>Start feeling better today</h2>
-    <a class="btn btn-flat" href="#">Get started</a>
-  </div>
+    <%= link_to "Get started", dashboard_path, class: "btn btn-dark rounded mt-2" %>  </div>
 </div>
