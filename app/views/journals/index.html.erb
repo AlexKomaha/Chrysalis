@@ -1,4 +1,28 @@
 <div class="container">
+  <div class="journal-title-wrapper">
+    <div class="journal-titles">
+      <h1>Your journals</h1>
+      <p>This is a secondary title</p>
+    </div>
+    <div>
+      <a class="btn btn-flat" href="#">Add a journal</a>
+    </div>
+  </div>
+  <div class="journals">
+    <div class="container d-flex justify-content-center">
+      <div>
+        <div class="journal-box px-4 py-2">
+          <% @journals.each do |journal| %>
+            <div class="journal">
+              <%= link_to journal.title, journal_path(journal) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%# <div class="container">
   <div class="journal-wrapper">
     <h1>Journals</h1>
     <div class="journal-paragraph-wrapper">
@@ -27,4 +51,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> %>
