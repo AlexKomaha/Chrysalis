@@ -4,5 +4,5 @@ class UserGoal < ApplicationRecord
   validates :description, presence: true
   enum status: [ :active, :done, :inactive ]
 
-  SUGGESTED = ["Call grandma", "Change the bedsheets"]
+  SUGGESTED = ["Edit resume", "Change the bedsheets", "Make myself dinner"]
 end
