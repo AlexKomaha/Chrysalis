@@ -6,7 +6,7 @@ class UserGoalsController < ApplicationController
 
   def new
     @user_goal = UserGoal.new
-    # authorize @user_goal
+    authorize @user_goal
   end
 
   def create
