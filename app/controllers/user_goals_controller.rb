@@ -1,7 +1,7 @@
 class UserGoalsController < ApplicationController
   def index
     @user_goal = UserGoal.where(user_id: current_user)
-    @user_goals = policy_scope(UserGoals)
+    @user_goals = policy_scope(UserGoal)
   end
 
   def new
@@ -11,9 +11,9 @@ class UserGoalsController < ApplicationController
   end
 
   def create
-    authorize @user_goal
     user_goal_params[:descriptions].each do |description|
-      UserGoal.create(user: current_user, description: description)
+      user_goal = UserGoal.create(user: current_user, description: description)
+      authorize user_goal
     end
     redirect_to user_goals_path
   end
