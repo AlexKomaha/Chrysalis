@@ -1,0 +1,26 @@
+.journal-paragraph-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.journal-wrapper {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.month {
+  width: 100%;
+  background-color: white;
+  margin: 0.8em 0px;
+  text-align: center;
+  padding: 5px 35px;
+}
+
+.month-box {
+  background-color: #D5DCF9;
+
+}
+
+.journal-each-year {
+  margin-bottom: 20px;
+}
