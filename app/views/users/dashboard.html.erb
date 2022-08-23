@@ -6,6 +6,7 @@
 <%# Need to limit to only the goals that have been selected on a specific day (today) %>
 <div class="container pb-5">
   <h5><strong> Your goals today</strong></h5>
+  <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat" %>
   <div class="">
     <% @user_goals.first(4).each do |goal| %>
       <%= goal.description %>
