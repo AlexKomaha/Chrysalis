@@ -1,1 +1,38 @@
 // Specific CSS for your home-page
+.middle-content {
+  text-align: center;
+  padding-bottom: 100px;
+
+  h2 {
+    padding-top: 100px;
+  }
+
+  p {
+    padding-top: 20px;
+  }
+}
+
+.bottom-content {
+  text-align: center;
+
+  h2 {
+    padding-top: 100px;
+  }
+
+  a {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+}
+
+.footer {
+  text-align: center;
+  background-color: #D5DCF9;
+  padding: 10px;
+  height: 80px;
+
+  p {
+    margin-bottom: 0;
+    margin-top: 18px;
+  }
+}
