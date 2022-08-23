@@ -6,12 +6,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :dashboard, only: [:dashboard]
   resources :user_goals, only: [:new, :create, :update, :index]
   resources :emotions, only: [:new, :create, :index]
   resources :journals, only: [:new, :create, :index, :show]
 
-  # get "/dashboard", to: "users#dashboard"
+  get "/dashboard", to: "users#dashboard"
   # get "/user_goals/new", to: "user_goals#new"
   # post "/user_goals", to: "user_goals#create"
   # patch "/user_goals/:id", to: "user_goals#update"
