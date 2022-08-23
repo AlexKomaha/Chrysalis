@@ -1,7 +1,9 @@
 <div class="container mt-5">
-  <h1><strong>Goals You Have Accomplished</strong></h1>
-  <h4>Keep track of the goals you have achieved</h4>
-  <a class="btn btn-flat" href="#">Add a goal</a>
+    <h1><strong>Goals You Have Accomplished</strong></h1>
+    <div class="index-paragraph-wrapper mb-5">
+      <h4>Keep track of the goals you have achieved</h4>
+      <a class="btn btn-flat" href="#">Add a goal</a>
+    </div>
 
   <% @user_goals.first(5).each do |user_goal| %>
     <div class="progress">
