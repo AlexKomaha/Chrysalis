@@ -5,7 +5,10 @@
 </div>
 <%# Need to limit to only the goals that have been selected on a specific day (today) %>
 <div class="container pb-5">
-  <% @user_goals.first(4).each do |goal| %>
-    <%= goal.description %>
-  <% end %>
+  <h5><strong> Your goals today</strong></h5>
+  <div class="">
+    <% @user_goals.first(4).each do |goal| %>
+      <%= goal.description %>
+    <% end %>
+  </div>
 </div>
