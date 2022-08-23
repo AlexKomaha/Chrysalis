@@ -6,10 +6,21 @@ class UserGoalsController < ApplicationController
 
   def new
     @user_goal = UserGoal.new
-    # authorize @user_goal
+    authorize @user_goal
+    @goals = current_user.all_possible_descriptions
   end
 
   def create
-    raise
+    user_goal_params[:descriptions].each do |description|
+      user_goal = UserGoal.create(user: current_user, description: description)
+      authorize user_goal
+    end
+    redirect_to user_goals_path
+  end
+
+  private
+
+  def user_goal_params
+    params.require(:user_goal).permit(:status, :description, descriptions: [])
   end
 end
