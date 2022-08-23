@@ -9,4 +9,12 @@ class User < ApplicationRecord
   has_many :goals, through: :user_goals
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  def previous_goal_descriptions
+    user_goals.pluck(:description).uniq
+  end
+
+  def all_possible_descriptions
+    (previous_goal_descriptions + UserGoal::SUGGESTED).uniq
+  end
 end

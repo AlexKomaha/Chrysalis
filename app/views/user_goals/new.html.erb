@@ -1,1 +1,20 @@
-<h1>I am the add goals page</h1>
+<div class="container pt-3">
+  <h1>Choose your goal/s for your day today</h1>
+  <hr>
+  <%= simple_form_for @user_goal do |f| %>
+    <fieldset class="form-group check_boxes optional user_goal_tags">
+      <legend class="col-form-label pt-3">Write a custom goal</legend>
+      <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Make lunch for myself' %>
+      <legend class="col-form-label pt-3">Suggested goals for you</legend>
+      <%# <input type="hidden" name="user_goal[descriptions][]" value=""> %>
+      <% @goals.each do |goal| %>
+        <div class="tag-item">
+          <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="<%= goal %>" name="user_goal[descriptions][]" id="user_goal_descriptions_<%= goal %>">
+          <label class="form-check-label collection_check_boxes" for="user_goal_descriptions_<%= goal %>"><%= goal %></label>
+        </div>
+      <% end %>
+    </fieldset>
+    <%= link_to "Cancel", user_goals_path, class: "btn btn-dark my-3" %>
+    <%= f.button :submit, "Save", class: "btn btn-dark my-3" %>
+  <% end %>
+</div>
