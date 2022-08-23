@@ -1,4 +1,4 @@
-class UserGoalPolicy < ApplicationPolicy
+class UsersPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     # def resolve
@@ -8,8 +8,5 @@ class UserGoalPolicy < ApplicationPolicy
     def resolve
       scope.where(user: user)
     end
-  end
-  def dashboard?
-    user
   end
 end
