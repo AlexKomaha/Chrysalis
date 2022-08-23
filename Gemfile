@@ -79,3 +79,6 @@ end
 
 # addfaker
 gem 'faker'
+
+# add pundit
+gem "pundit"
