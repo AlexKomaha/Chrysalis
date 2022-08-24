@@ -18,6 +18,12 @@ class UserGoalsController < ApplicationController
     redirect_to user_goals_path
   end
 
+  def update
+    @user_goal = UserGoal.find(params[:id])
+    @user_goal.status = "done"
+    authorize @user_goal
+  end
+
   private
 
   def user_goal_params

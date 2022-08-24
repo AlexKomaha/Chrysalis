@@ -14,6 +14,10 @@ class UserGoalPolicy < ApplicationPolicy
     new?
   end
 
+  def update
+    true
+  end
+
   def dashboard?
     user
   end
