@@ -2,7 +2,6 @@
   <%# <%= image_tag "logo.png", class: "" %>
   <h1><strong>Hello, <%= current_user.first_name %></strong></h1>
   <h3>Welcome back!</h3>
-  <%= render "users/checkbox" %>
 </div>
 <%# Need to limit to only the goals that have been selected on a specific day (today) %>
 <div class="container pb-5">
@@ -10,7 +9,10 @@
   <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat" %>
   <div class="">
     <% @user_goals.first(4).each do |goal| %>
-      <%= goal.description %>
+      <div class="d-flex align-items-baseline">
+        <%= render "users/checkbox", goal: goal %>
+        <%= goal.description %>
+      </div>
     <% end %>
     <div class="jumbotron jumbotron-fluid text-left dash-bg-color pb-4">
       <div class="container col-7">

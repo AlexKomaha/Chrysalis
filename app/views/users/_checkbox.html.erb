@@ -1,2 +1,4 @@
-<input type="checkbox" id="todo" name="todo" value="todo">
-<label for="todo" data-content="Get out of bed">Get out of bed</label>
+<%= simple_form_for goal do |f| %>
+  <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+  <%= f.submit 'Accept', class: 'btn btn-info' %>
+<% end %>
