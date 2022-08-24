@@ -1,7 +1,7 @@
 class UserGoalsController < ApplicationController
   def index
     @user_goal = UserGoal.where(user_id: current_user)
-    @user_goals = policy_scope(UserGoal)
+    @user_goals = policy_scope(UserGoal).group_by(&:description)
   end
 
   def new
@@ -16,6 +16,12 @@ class UserGoalsController < ApplicationController
       authorize user_goal
     end
     redirect_to user_goals_path
+  end
+
+  def update
+    @user_goal = UserGoal.find(params[:id])
+    @user_goal.status = "done"
+    authorize @user_goal
   end
 
   private

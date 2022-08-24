@@ -41,11 +41,17 @@ User.all.each do |user|
   puts "#{Journal.count} journals created"
 
   puts "Getting goal data"
+
   UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
   UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
   UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
   UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
   UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
+  UserGoal.create!(description: "Make my bed", user: user, status: "done")
+  UserGoal.create!(description: "Make my bed", user: user, status: "active")
+  UserGoal.create!(description: "Make my bed", user: user, status: "active")
+  UserGoal.create!(description: "Make my bed", user: user, status: "active")
+  UserGoal.create!(description: "Make my bed", user: user, status: "done")
   UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
   UserGoal.create!(description: "Make myself lunch", user: user, status: "done")
   UserGoal.create!(description: "Make myself lunch", user: user, status: "done")
