@@ -1,12 +1,12 @@
 <div class="container pt-5 col-8">
   <h1>Choose your daily goal</h1>
-  <h5>You can also set yourself a challenge and select more than one goal for the day.</h5>
+  <h5 class="py-3">Set yourself a challenge and select more than one goal for the day.</h5>
   <hr>
   <%= simple_form_for @user_goal do |f| %>
     <fieldset class="form-group check_boxes optional user_goal_tags">
       <legend class="col-form-label py-4 text-center"><strong>Write a custom goal</strong></legend>
       <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Make lunch for myself' %>
-      <legend class="col-form-label py-4 text-center"><strong>Suggested goals for you</strong></legend>
+      <legend class="col-form-label pt-5 pb-4 text-center"><strong>Suggested goals for you</strong></legend>
       <% @goals.each do |goal| %>
         <div class="tag-item">
           <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="<%= goal %>" name="user_goal[descriptions][]" id="user_goal_descriptions_<%= goal %>">
@@ -15,8 +15,8 @@
       <% end %>
     </fieldset>
     <div class="py-5 text-center">
-      <%= link_to "Back", user_goals_path, class: "btn btn-light my-3" %>
-      <%= f.button :submit, "Save", class: "btn btn-light my-4 mx-4" %>
+      <%= link_to "Cancel", user_goals_path, class: "btn btn-light my-3 mx-4 px-4" %>
+      <%= f.button :submit, "Save", class: "btn btn-light my-4 mx-4 px-4" %>
     </div>
   <% end %>
 </div>
