@@ -11,7 +11,7 @@
     <% @user_goals.first(4).each do |goal| %>
       <div class="d-flex">
         <%= render "users/checkbox", goal: goal %>
-        <%= goal.description %>
+        <p class ="goal-description"><%= goal.description %></p>
       </div>
     <% end %>
     <div class="jumbotron jumbotron-fluid text-left dash-bg-color pb-4">
