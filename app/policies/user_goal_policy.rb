@@ -19,6 +19,6 @@ class UserGoalPolicy < ApplicationPolicy
   end
 
   def dashboard?
-    user
+    record.user == user
   end
 end

@@ -14,7 +14,7 @@ $green: #06842c;
 }
 
 
-input[type="checkbox"] {
+.input[type="checkbox"] {
   position: relative;
   width: 1.5em;
   height: 1.5em;
@@ -52,7 +52,7 @@ input[type="checkbox"] {
   }
 }
 
-label {
+.label {
   position: relative;
   cursor: pointer;
   font-size: 1.5em;
