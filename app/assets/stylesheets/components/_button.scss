@@ -1,18 +1,21 @@
-// .btn-flat {
-//   color: white;
-//   padding: 8px 24px;
-//   border-radius: 4px;
-//   background: #670BFF;
-//   transition: background 0.3s ease;
-// }
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #B9D798;
+  transition: background 0.3s ease;
+  font-weight: 700;
+  font-size: 20px;
+}
 
-// .btn-flat:hover {
-//   background: #4D04C4;
-//   color: white;
-// }
+.btn-flat:hover {
+  background: #AFD189;
+  color: white;
+}
 
 .btn-light {
   background-color: #F9F8FD;
+  font-weight: 500;
   &:hover {
     background-color: #F9F8FD;
     box-shadow: 0 0 1px rgba(0,0,0,0.2);
