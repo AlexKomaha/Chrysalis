@@ -3,62 +3,30 @@
   <div class="container">
     <h1>Chrysalis</h1>
     <p>Achieve goals, build habits, stay on track and become a better you today</p>
+    <%# Change the button colour %>
     <%= link_to "Get started", dashboard_path, class: "btn btn-light rounded mt-2" %>
   </div>
 </div>
 <div class="middle-content">
   <div class="container">
     <h2>How we've helped</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt laborum dolores tempora, officia reprehenderit dolorum. Soluta sequi delectus inventore cumque libero quis, quia aspernatur dicta similique atque fuga corrupti. Dolore!</p>
-    <div class="row d-flex justify-content-center pt-5">
-      <div class="col-4">
-        <div class="card review-card p-3 text-center">
-          <blockquote class="blockquote mb-0">
-            <p><i class="fa-solid fa-quote-left"></i> I experienced tremendous growth in my 1+ year with the service, they have helped me so much. <i class="fa-solid fa-quote-right"></i></p>
-            <footer class="blockquote-footer pt-2">
-              <small class="text-muted">
-                <cite title="Source Title">Fujioka Yoshiro</cite>
-              </small>
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card review-card p-3 text-center">
-          <blockquote class="blockquote mb-0">
-            <p><i class="fa-solid fa-quote-left"></i> I felt so alone and stuck before I found Chrysalis. I've changed my way of life and am improving day by day. <i class="fa-solid fa-quote-right"></i></p>
-            <footer class="blockquote-footer pt-2">
-              <small class="text-muted">
-                <cite title="Source Title">Nakasone Junko</cite>
-              </small>
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card review-card p-3 text-center">
-          <blockquote class="blockquote mb-0">
-            <p><i class="fa-solid fa-quote-left"></i> I was in a dark place for a long time. Setting challenges every day has really helped me stay accountable. <i class="fa-solid fa-quote-right"></i></p>
-            <footer class="blockquote-footer pt-2">
-              <small class="text-muted">
-                <cite title="Source Title">Shinohara Hisao</cite>
-              </small>
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
+    <%# Add more detail here. %>
+    <p>Across the country, we have supported thousands of people to integrate back into society through actionable steps.</p>
+    <%= render "pages/review_cards" %>
   </div>
 </div>
+<%# Change the colour here %>
 <div class="middle-content" style="background-color: #D5DCF9;">
-  <%# #a1cca5 %>
   <div class="container">
     <h2>How does it work?</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt laborum dolores tempora, officia reprehenderit dolorum. Soluta sequi delectus inventore cumque libero quis, quia aspernatur dicta similique atque fuga corrupti. Dolore!</p>
+    <%# Add more details here %>
+    <p>Succint explanation here and how it is effective.</p>
+    <%= render "pages/how" %>
   </div>
 </div>
 <div class="bottom-content">
   <div class="container">
     <h3>Start working on you today</h3>
+    <%# Change the button colour %>
     <%= link_to "Get started", dashboard_path, class: "btn btn-dark rounded mt-2" %>  </div>
 </div>
