@@ -1,1 +1,11 @@
 <%# For the goals accomplished, top 5 or whatever %>
+<% @user_goals.limit(7).each do |description, user_goals| %>
+  <%# if user_goal.status == "done" %>
+  <%= description %>
+  <div class="progress">
+    <% done = user_goals.count(&:done?) %>
+    <% total = user_goals.count %>
+    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> / <%= total %></div>
+  </div>
+  <%# end %>
+<% end %>
