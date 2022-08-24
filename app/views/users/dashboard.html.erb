@@ -10,7 +10,7 @@
   <div class="">
     <% @user_goals.first(4).each do |goal| %>
       <div class="d-flex">
-        <%= render "users/checkbox", goal: goal %>
+        <%# <%= render "users/checkbox", goal: goal %>
         <p class ="goal-description"><%= goal.description %></p>
       </div>
     <% end %>
