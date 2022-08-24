@@ -1,8 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.pexels.com/photos/132076/pexels-photo-132076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);">
+  <%#= image_tag "logo.png", class: "banner-logo" %>
   <div class="container">
     <h1>Chrysalis</h1>
     <p>Achieve goals, build habits, stay on track and become a better you today</p>
-    <a class="btn btn-flat" href="#">Get started</a>
+    <%= link_to "Get started", dashboard_path, class: "btn btn-light rounded mt-2" %>
   </div>
 </div>
 <div class="middle-content">
@@ -12,6 +13,7 @@
   </div>
 </div>
 <div class="middle-content" style="background-color: #D5DCF9;">
+  <%# #a1cca5 %>
   <div class="container">
     <h2>How we've helped</h2>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt laborum dolores tempora, officia reprehenderit dolorum. Soluta sequi delectus inventore cumque libero quis, quia aspernatur dicta similique atque fuga corrupti. Dolore!</p>
@@ -19,7 +21,6 @@
 </div>
 <div class="bottom-content">
   <div class="container">
-    <h2>Start feeling better today</h2>
-    <a class="btn btn-flat" href="#">Get started</a>
-  </div>
+    <h3>Start working on you today</h3>
+    <%= link_to "Get started", dashboard_path, class: "btn btn-dark rounded mt-2" %>  </div>
 </div>
