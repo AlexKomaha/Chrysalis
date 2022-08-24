@@ -14,6 +14,19 @@ class JournalsController < ApplicationController
   end
 
   def create
+    @journal = Journal.new(journal_params)
+    @journal.user = current_user
+    authorize @journal
+    if @journal.save
+      redirect_to journals_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
 
+  private
+
+  def journal_params
+    params.require(:journal).permit(:content, :title, :user_id)
   end
 end

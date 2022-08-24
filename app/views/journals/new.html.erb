@@ -5,7 +5,7 @@
       <%= f.input :title %>
       <%= f.input :content %>
       <div class="d-flex justify-content-center">
-        <%= f.submit 'Cancel', class: 'btn btn-info m-3 px-4' %>
+        <%= link_to "Cancel", journals_path, class: "btn btn-info m-3 px-4" %>
         <%= f.submit 'Save', class: 'btn btn-info m-3 px-4' %>
       </div>
     <% end %>
