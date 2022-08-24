@@ -5,13 +5,13 @@
     <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat" %>
   </div>
   <%# Iterating over a hash. The keys are all unique descriptions and the values are the user_goals for that description %>
-  <% @user_goals.each do |description, user_goals| %>
+  <% @user_goals.each_with_index do |(description, user_goals), index| %>
   <%# if user_goal.status == "done" %>
     <%= description %>
     <div class="progress">
       <% done = user_goals.count(&:done?) %>
       <% total = user_goals.count %>
-      <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> / <%= total %></div>
+      <div class="progress-bar progress-bar-striped progress-bar-<%= @colors[index % 4] %>" role="progressbar" aria-label="Default striped example" style=" color: black; width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> / <%= total %></div>
     </div>
   <%# end %>
   <% end %>

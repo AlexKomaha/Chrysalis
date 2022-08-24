@@ -3,6 +3,12 @@
   border-radius: 10px;
   height: 43px;
   margin: 15px 0;
+  color: black;
+
+  &-bar-blue {background-color: $pastel-blue;}
+  &-bar-green {background-color: $pastel-green;}
+  &-bar-purple {background-color: $pastel-purple;}
+  &-bar-orange {background-color: $pastel-orange;}
 }
 
 .index-paragraph-wrapper {
