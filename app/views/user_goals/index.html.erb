@@ -4,18 +4,15 @@
     <h4>Keep track of the goals you have accomplished</h4>
     <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat" %>
   </div>
-
   <%# Iterating over a hash. The keys are all unique descriptions and the values are the user_goals for that description %>
   <% @user_goals.each_with_index do |(description, user_goals), index| %>
-  <%# if user_goal.status == "done" %>
+    <%# if user_goal.status == "done" %>
     <%= description %>
     <div class="progress">
       <% done = user_goals.count(&:done?) %>
       <% total = user_goals.count %>
       <div class="progress-bar progress-bar-striped progress-bar-<%= @colors[index % 4] %>" role="progressbar" aria-label="Default striped example" style=" color: black; width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> / <%= total %></div>
     </div>
-  <%# end %>
+    <%# end %>
   <% end %>
 </div>
-
-<%# The goals should add up (and show a number) onto each bar, right now when you create a new goal it is added as a new progress bar. It shouldn't add to this page unless the user has marked it as done. %>
