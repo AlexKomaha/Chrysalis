@@ -42,6 +42,10 @@ User.all.each do |user|
 
   puts "Getting goal data"
   UserGoal.create!(description: "Make my bed", user: user, status: "done")
+  UserGoal.create!(description: "Make my bed", user: user, status: "active")
+  UserGoal.create!(description: "Make my bed", user: user, status: "active")
+  UserGoal.create!(description: "Make my bed", user: user, status: "active")
+  UserGoal.create!(description: "Make my bed", user: user, status: "done")
   UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
   UserGoal.create!(description: "Make myself lunch", user: user, status: "done")
   UserGoal.create!(description: "Talk to a family member or friend", user: user, status: "done")
