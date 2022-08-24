@@ -6,6 +6,9 @@
 .dash-h1 {
   font-weight: 700;
   font-size: 50px;
+  position: relative;
+  top: -48px;
+  left: -4px;
 }
 
 .dashboard-h2 {
@@ -13,12 +16,15 @@
   font-size: 24px;
   position: relative;
   top: -73px;
-  left: 200px;
+  left: 150px;
 }
 
 .dash-h3 {
   font-weight: 400;
   font-size: 28px;
+  position: relative;
+  top: -45px;
+  left: 0px;
 }
 
 .dash-icon {
@@ -26,5 +32,11 @@
   height: 40px;
   width: auto;
   top: 8px;
-  left: 196px;
+  left: 150px;
+}
+
+.dash-button {
+  position: relative;
+  top: -172px;
+  left: 610px;
 }
