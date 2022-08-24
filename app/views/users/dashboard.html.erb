@@ -1,15 +1,34 @@
-<div class="container pt-5">
-  <%# <%= image_tag "logo.png", class: "" %>
-  <h1><strong>Hello, <%= current_user.first_name %></strong></h1>
-  <h3>Welcome back!</h3>
+<div class="jumbotron jumbotron-fluid text-left dash-bg-color pb-4">
+  <div class="container col-7">
+    <%= image_tag "logo.png", class: "dashboard-logo" %>
+    <h1 class="display-4 dash-h1"><strong>Hello, <%= current_user.first_name %></strong></h1>
+    <h3 class="lead dash-h3">Welcome back!</h3>
+  </div>
 </div>
-<%# Need to limit to only the goals that have been selected on a specific day (today) %>
-<div class="container pb-5">
-  <h5><strong> Your goals today</strong></h5>
-  <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat" %>
-  <div class="">
-    <% @user_goals.first(4).each do |goal| %>
-      <%= goal.description %>
-    <% end %>
+<div class="row">
+  <div class="col py-5 px-0">
+    <%= image_tag "calendar.png", class: "dash-icon" %>
+    <h2 class="dashboard-h2 text-left p-5">This month</h2>
+    <%= link_to "View more", emotions_path, class: "btn btn-dark rounded mt-2 dash-button" %>
+    <%# Add partial here for emotions calendar (one month) %>
+  </div>
+  <div class="col py-5 px-0">
+    <%= image_tag "target.png", class: "dash-icon" %>
+    <h2 class="dashboard-h2 text-left p-5">Your goals for today</h2>
+    <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-dark rounded mt-2 dash-button" %>
+    <%# Add partial here for daily goals %>
+  </div>
+  <div class="w-100"></div>
+  <div class="col py-5 px-0">
+    <%= image_tag "article.png", class: "dash-icon" %>
+    <h2 class="dashboard-h2 text-left p-5">Newest article</h2>
+    <%= link_to "View more", "#", class: "btn btn-dark rounded mt-2 dash-button" %>
+    <%# Add a partial here for the newest article %>
+  </div>
+  <div class="col py-5 px-0">
+    <%= image_tag "success.png", class: "dash-icon" %>
+    <h2 class="dashboard-h2 text-left p-5">Goals you have accomplished</h2>
+    <%= link_to "View more", user_goals_path, class: "btn btn-dark rounded mt-2 dash-button" %>
+    <%# Add a partial here for a shortlist of the goals that have been achieved - perhaps top five or seven %>
   </div>
 </div>
