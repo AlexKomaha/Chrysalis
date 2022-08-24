@@ -9,7 +9,7 @@
   <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat" %>
   <div class="">
     <% @user_goals.first(4).each do |goal| %>
-      <div class="d-flex align-items-baseline">
+      <div class="d-flex">
         <%= render "users/checkbox", goal: goal %>
         <%= goal.description %>
       </div>

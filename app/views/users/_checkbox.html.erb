@@ -1,4 +1,4 @@
 <%= simple_form_for goal do |f| %>
   <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-  <%= f.submit 'Accept', class: 'btn btn-info' %>
+  <input type="checkbox" id="todo" name="todo" value="todo" onchange="edit_user_goal_<%= goal.id %>.submit()">
 <% end %>
