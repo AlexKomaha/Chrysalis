@@ -7,4 +7,13 @@ class JournalsController < ApplicationController
     @journal = Journal.find(params[:id])
     authorize @journal
   end
+
+  def new
+    @journal = Journal.new
+    authorize @journal
+  end
+
+  def create
+
+  end
 end
