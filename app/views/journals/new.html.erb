@@ -3,7 +3,9 @@
     <h2>How was your day today</h2>
     <%= simple_form_for @journal do |f| %>
       <%= f.input :title %>
-      <%= f.input :content %>
+      <div class="form-inputs">
+        <%= f.rich_text_area :rich_content %>
+      </div>
       <div class="d-flex justify-content-center">
         <%= link_to "Cancel", journals_path, class: "btn btn-info m-3 px-4" %>
         <%= f.submit 'Save', class: 'btn btn-info m-3 px-4' %>
