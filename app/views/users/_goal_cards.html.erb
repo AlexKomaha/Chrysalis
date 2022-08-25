@@ -1,1 +1,21 @@
 <%# For the goal cards with the checkboxes %>
+<%# Need to render the checkboxes in the interation %>
+<div class='container overflow-hidden'>
+  <div class='row gx-5'>
+    <% if @today_goals.any? %>
+      <% @today_goals.first(4).each do |goal| %>
+        <div class="col-sm-12">
+          <div class="card-product my-4 mx-3">
+            <div class="card-product-infos">
+              <%= simple_form_for goal do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+                <input type="checkbox" id="todo" name="todo" value="todo" onchange="edit_user_goal_<%= goal.id %>.submit()">
+              <% end %>
+              <h2 class="align-middle"><%= goal.description %></h2>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

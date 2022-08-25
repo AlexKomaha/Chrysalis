@@ -12,10 +12,17 @@
 }
 
 .dash-button {
- position: relative;
- top: -42px;
- left: 410px;
-}
+  position: relative;
+  top: -42px;
+  left: 410px;
+  background-color: #F9F8FD;
+  border-radius: 30px;
+  font-weight: 500;
+  &:hover {
+    background-color: #F9F8FD;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  }
+ }
 
 .parent {
   display: grid;
