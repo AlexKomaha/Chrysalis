@@ -41,24 +41,230 @@ User.all.each do |user|
   puts "#{Journal.count} journals created"
 
   puts "Getting goal data"
-  UserGoal.create!(description: "Make my bed", user: user, status: "done")
-  UserGoal.create!(description: "Take a shower or a bath", user: user, status: "done")
-  UserGoal.create!(description: "Make myself lunch", user: user, status: "done")
-  UserGoal.create!(description: "Talk to a family member or friend", user: user, status: "done")
-  UserGoal.create!(description: "Brush my teeth", user: user, status: "done")
-  UserGoal.create!(description: "Wash the dishes", user: user, status: "done")
-  UserGoal.create!(description: "Take a short walk", user: user, status: "done")
-  UserGoal.create!(description: "Clean my room", user: user, status: "done")
-  UserGoal.create!(description: "Change clothes", user: user, status: "done")
-  UserGoal.create!(description: "Call my grandma", status: "active", user: user)
-  UserGoal.create!(description: "Watch TV with my mother", status: "inactive", user: user)
-  UserGoal.create!(description: "Take the dog for a walk", status: "active", user: user)
-  UserGoal.create!(description: "Organise my manga collection", status: "inactive", user: user)
-  UserGoal.create!(description: "Make an appointment with my doctor", status: "active", user: user)
-  UserGoal.create!(description: "Go to the drugstore and buy toilet paper", status: "inactive", user: user)
-  UserGoal.create!(description: "Call my friend and see if he wants to come over", status: "active", user: user)
-  UserGoal.create!(description: "Take out the trash", status: "active", user: user)
-  UserGoal.create!(description: "Do my laundry", status: "done", user: user)
+
+  30.times do
+    UserGoal.create!(
+      description: "Take a shower or a bath",
+      user: user,
+      status: "done"
+    )
+  end
+
+  5.times do
+    UserGoal.create!(
+      description: "Take a shower or a bath",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  24.times do
+    UserGoal.create!(
+      description: "Make my bed",
+      user: user,
+      status: "done"
+    )
+  end
+
+  15.times do
+    UserGoal.create!(
+      description: "Take a shower or a bath",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  15.times do
+    UserGoal.create!(
+      description: "Make myself lunch",
+      user: user,
+      status: "done"
+    )
+  end
+
+  8.times do
+    UserGoal.create!(
+      description: "Make myself lunch",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  18.times do
+    UserGoal.create!(
+      description: "Talk to a family member or friend",
+      user: user,
+      status: "done"
+    )
+  end
+
+  8.times do
+    UserGoal.create!(
+      description: "Talk to a family member or friend",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  46.times do
+    UserGoal.create!(
+      description: "Brush my teeth",
+      user: user,
+      status: "done"
+    )
+  end
+
+  8.times do
+    UserGoal.create!(
+      description: "Brush my teeth",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  20.times do
+    UserGoal.create!(
+      description: "Wash the dishes",
+      user: user,
+      status: "done"
+    )
+  end
+
+  13.times do
+    UserGoal.create!(
+      description: "Wash the dishes",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  5.times do
+    UserGoal.create!(
+      description: "Take a short walk",
+      user: user,
+      status: "done"
+    )
+  end
+
+  6.times do
+    UserGoal.create!(
+      description: "Take a short walk",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  3.times do
+    UserGoal.create!(
+      description: "Clean my room",
+      user: user,
+      status: "done"
+    )
+  end
+
+  1.times do
+    UserGoal.create!(
+      description: "Clean my room",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  5.times do
+    UserGoal.create!(
+      description: "Change clothes",
+      user: user,
+      status: "done"
+    )
+  end
+
+  2.times do
+    UserGoal.create!(
+      description: "Change clothes",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  1.times do
+    UserGoal.create!(
+      description: "Call my grandma",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  4.times do
+    UserGoal.create!(
+      description: "Watch TV with my mother",
+      user: user,
+      status: "done"
+    )
+  end
+
+  2.times do
+    UserGoal.create!(
+      description: "Take the dog for a walk",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  1.times do
+    UserGoal.create!(
+      description: "Organise my manga collection",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  2.times do
+    UserGoal.create!(
+      description: "Make an appointment with my doctor",
+      user: user,
+      status: "done"
+    )
+  end
+
+  2.times do
+    UserGoal.create!(
+      description: "Go to doctor's appointment",
+      user: user,
+      status: "done"
+    )
+  end
+
+  1.times do
+    UserGoal.create!(
+      description: "Go to the drugstore and buy toilet paper",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  1.times do
+    UserGoal.create!(
+      description: "Call my friend and see if he wants to come over",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  3.times do
+    UserGoal.create!(
+      description: "Take out the trash",
+      user: user,
+      status: "done"
+    )
+  end
+
+  5.times do
+    UserGoal.create!(
+      description: "Do my laundry",
+      user: user,
+      status: "done"
+    )
+  end
 
   puts "#{UserGoal.count} user goals created"
 end
