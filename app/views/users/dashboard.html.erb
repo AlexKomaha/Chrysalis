@@ -1,42 +1,15 @@
-<div class="jumbotron jumbotron-fluid dash-bg-color">
-  <div class="container">
-    <%#= image_tag "logo.png", class: "dashboard-logo" %>
-    <h1 class="pt-5"><strong>Hello, <%= current_user.first_name %></strong></h1>
-    <h4 class="pt-2">Welcome back!</h4>
-  </div>
-</div>
 <div class="container">
   <div class="row gx-5">
-    <div class="col-6">
-      <div class="p-3">
-        <%= image_tag "calendar.png", class: "dash-icon" %>
-        <h4 class="text-left">This month</h4>
-        <%= link_to "View more", emotions_path, class: "btn btn-light rounded dash-button" %>
-        <%# Add partial here for emotions calendar (one month) %>
-        <%# Placeholder image %>
-        <%= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
-      </div>
-    </div>
     <div class="col-6">
       <div class="p-3">
         <%= image_tag "target.png", class: "dash-icon" %>
         <h4 class="text-left">Your goals for today</h4>
         <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light rounded dash-button" %>
         <%# Add partial here for daily goals %>
-        <div class="container">
-          <%# Used the goals achieved as a placeholder %>
-          <%= render "users/goals_achieved" %>
+        <%# Used the goals achieved as a placeholder %>
+        <div>
+          <%= render "users/goal_cards" %>
         </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 pb-5">
-        <%= image_tag "article.png", class: "dash-icon" %>
-        <h4 class="text-left">Newest article</h4>
-        <%= link_to "View more", "#", class: "btn btn-light rounded dash-button" %>
-        <%# Add a partial here for the newest article %>
-        <%# Placeholder image %>
-        <%= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
       </div>
     </div>
     <div class="col-6">
@@ -48,6 +21,26 @@
         <div class="container">
           <%= render "users/goals_achieved" %>
         </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 pb-5">
+        <%= image_tag "article.png", class: "dash-icon" %>
+        <h4 class="text-left">Newest article</h4>
+        <%= link_to "View more", "#", class: "btn btn-light rounded dash-button" %>
+        <%# Add a partial here for the newest article %>
+        <%# Placeholder image %>
+        <%#= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3">
+        <%= image_tag "calendar.png", class: "dash-icon" %>
+        <h4 class="text-left">This month</h4>
+        <%= link_to "View more", emotions_path, class: "btn btn-light rounded dash-button" %>
+        <%# Add partial here for emotions calendar (one month) %>
+        <%# Placeholder image %>
+        <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
       </div>
     </div>
   </div>
