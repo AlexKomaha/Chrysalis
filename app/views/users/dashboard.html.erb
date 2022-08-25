@@ -1,10 +1,4 @@
-<div class="jumbotron jumbotron-fluid dash-bg-color">
-  <div class="container">
-    <%#= image_tag "logo.png", class: "dashboard-logo" %>
-    <h1 class="pt-5"><strong>Hello, <%= current_user.first_name %></strong></h1>
-    <h4 class="pt-2">Welcome back!</h4>
-  </div>
-</div>
+
 <div class="container">
   <div class="row gx-5">
     <div class="col-6">
@@ -25,7 +19,9 @@
         <%# Add partial here for daily goals %>
         <div class="container">
           <%# Used the goals achieved as a placeholder %>
+          <span>&#10003;</span>
           <%= render "users/goals_achieved" %>
+
         </div>
       </div>
     </div>
