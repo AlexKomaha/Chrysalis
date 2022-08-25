@@ -32,10 +32,13 @@
   width: 40px;
 }
 
+// Uncomment for white writing on a black navbar
 .nav-link {
-  color: white;
+  color: $black;
+  // color: white;
   &:hover {
     font-weight: 600;
-    color: white;
+    color: $black;
+    // color: white;
   }
 }
