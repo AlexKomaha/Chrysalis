@@ -1,9 +1,9 @@
-<% @user_goals.first(5).each do |description, user_goals| %>
+<% @user_goals.first(5).each_with_index do |(description, user_goals), index| %>
   <%= description %>
   <div class="progress" style="height: 50px; width: 500px;">
     <% done = user_goals.count(&:done?) %>
     <% total = user_goals.count %>
-    <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> / <%= total %></div>
+    <div class="progress-bar progress-bar-striped progress-bar-<%= @colors[index % 4] %>" role="progressbar" aria-label="Default striped example" style="width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> / <%= total %></div>
   </div>
 <% end %>
 <%# Shows old colour, need to change. %>
