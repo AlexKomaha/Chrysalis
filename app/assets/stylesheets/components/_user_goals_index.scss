@@ -3,6 +3,7 @@
   border-radius: 10px;
   height: 43px;
   margin: 15px 0;
+  font-weight: bold;
 
   &-bar-blue {background-color: $pastel-blue;}
   &-bar-green {background-color: $pastel-green;}
@@ -13,4 +14,8 @@
 .index-paragraph-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.description {
+  font-weight: bolder;
 }
