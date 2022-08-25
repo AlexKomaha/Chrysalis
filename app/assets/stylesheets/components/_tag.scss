@@ -11,16 +11,31 @@
   cursor: pointer;
   display: inline-block;
   font-size: 18px;
+  font-weight: 700;
   border-radius: 50rem;
   padding: 0.1rem 0.5rem;
-  background-color: #B9D798;
   color: $white;
-  // border: 1px solid grey;
   margin-right: 0.6rem;
   margin-bottom: 0.4rem;
 }
 
 .tag-selector:checked + label {
-  background-color: #AFD189;
+  // background-color: #AFD189;
   color: $black;
+}
+
+.bg-blue {
+  background-color: $pop-blue;
+}
+
+.bg-green {
+  background-color: $pop-green;
+}
+
+.bg-purple {
+  background-color: $pop-purple;
+}
+
+.bg-orange {
+  background-color: $pop-orange;
 }
