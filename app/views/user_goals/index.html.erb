@@ -9,8 +9,10 @@
   <%# Iterating over a hash. The keys are all unique descriptions and the values are the user_goals for that description %>
   <% @user_goals.each_with_index do |(description, user_goals), index| %>
     <%# if user_goal.status == "done" %>
+    <div class="description">
     <i class="fa-solid fa-star"></i>
     <%= description %>
+    </div>
     <div class="progress mb-4">
       <% done = user_goals.count(&:done?) %>
       <% total = user_goals.count %>
