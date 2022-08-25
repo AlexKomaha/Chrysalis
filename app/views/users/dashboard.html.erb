@@ -5,8 +5,6 @@
         <%= image_tag "target.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>Your goals for today</strong></h4>
         <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button" %>
-        <%# Add partial here for daily goals %>
-        <%# Used the goals achieved as a placeholder %>
         <div>
           <%= render "users/goal_cards" %>
         </div>
@@ -17,7 +15,6 @@
         <%= image_tag "success.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>Goals you have accomplished</strong></h4>
         <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
-        <%# Add a partial here for a shortlist of the goals that have been achieved - perhaps top five or seven %>
         <div class="container">
           <%= render "users/goals_achieved" %>
         </div>
