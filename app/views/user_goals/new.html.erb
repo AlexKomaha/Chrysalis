@@ -5,14 +5,16 @@
   <%= simple_form_for @user_goal do |f| %>
     <fieldset class="form-group check_boxes optional user_goal_tags">
       <legend class="col-form-label py-4 text-center"><strong>Write a custom goal</strong></legend>
-      <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Make lunch for myself' %>
+      <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Go grocery shopping' %>
       <legend class="col-form-label pt-5 pb-4 text-center"><strong>Suggested goals for you</strong></legend>
-      <% @goals.each do |goal| %>
-        <div class="tag-item">
-          <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="<%= goal %>" name="user_goal[descriptions][]" id="user_goal_descriptions_<%= goal %>">
-          <label class="form-check-label collection_check_boxes" for="user_goal_descriptions_<%= goal %>"><%= goal %></label>
-        </div>
-      <% end %>
+      <div class="d-flex justify-content-center align-items-center flex-wrap">
+        <% @goals.each_with_index do |(goal), index| %>
+          <div class="tag-item<%= @colors[index % 4] %>">
+            <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="<%= goal %>" name="user_goal[descriptions][]" id="user_goal_descriptions_<%= goal %>">
+            <label class="form-check-label collection_check_boxes" for="user_goal_descriptions_<%= goal %>"><%= goal %></label>
+          </div>
+        <% end %>
+      </div>
     </fieldset>
     <div class="py-5 text-center">
       <%= link_to "Cancel", user_goals_path, class: "btn btn-light my-3 mx-4 px-4" %>

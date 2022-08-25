@@ -10,6 +10,8 @@ class UserGoalsController < ApplicationController
     @user_goal = UserGoal.new
     authorize @user_goal
     @goals = current_user.all_possible_descriptions
+
+    @colors = ["blue", "green", "purple", "orange"]
   end
 
   def create
