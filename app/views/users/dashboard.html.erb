@@ -4,7 +4,7 @@
       <div class="p-3">
         <%= image_tag "target.png", class: "dash-icon" %>
         <h4 class="text-left">Your goals for today</h4>
-        <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light rounded dash-button" %>
+        <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button" %>
         <%# Add partial here for daily goals %>
         <%# Used the goals achieved as a placeholder %>
         <div>
@@ -16,7 +16,7 @@
       <div class="p-3 pb-5">
         <%= image_tag "success.png", class: "dash-icon" %>
         <h4 class="text-left">Goals you have accomplished</h4>
-        <%= link_to "View more", user_goals_path, class: "btn btn-light rounded dash-button" %>
+        <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
         <%# Add a partial here for a shortlist of the goals that have been achieved - perhaps top five or seven %>
         <div class="container">
           <%= render "users/goals_achieved" %>
@@ -26,8 +26,8 @@
     <div class="col-6">
       <div class="p-3 pb-5">
         <%= image_tag "article.png", class: "dash-icon" %>
-        <h4 class="text-left">Newest article</h4>
-        <%= link_to "View more", "#", class: "btn btn-light rounded dash-button" %>
+        <h4 class="text-left">New article</h4>
+        <%= link_to "View more", "#", class: "btn btn-light dash-button" %>
         <%# Add a partial here for the newest article %>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
@@ -37,7 +37,7 @@
       <div class="p-3">
         <%= image_tag "calendar.png", class: "dash-icon" %>
         <h4 class="text-left">This month</h4>
-        <%= link_to "View more", emotions_path, class: "btn btn-light rounded dash-button" %>
+        <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
         <%# Add partial here for emotions calendar (one month) %>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
