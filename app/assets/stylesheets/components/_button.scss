@@ -22,3 +22,33 @@
     box-shadow: 0 0 1px rgba(0,0,0,0.2);
   }
 }
+
+.btn-flat-devise {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #B9D798;
+  transition: background 0.3s ease;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.btn-flat-devise:hover {
+  background: #AFD189;
+  color: white;
+}
+
+.btn-flat-save {
+  color: white;
+  padding: 3px 24px;
+  border-radius: 4px;
+  background: #B9D798;
+  transition: background 0.3s ease;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.btn-flat-save:hover {
+  background: #AFD189;
+  color: white;
+}
