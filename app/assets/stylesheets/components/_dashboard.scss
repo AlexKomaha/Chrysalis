@@ -1,8 +1,6 @@
 .dash-bg-color {
   // Just a placeholder color for the background
   background-color: $pastel-green;
-  height: 180px;
-  width: auto;
 }
 
 .dash-icon {
@@ -42,4 +40,9 @@
 .placeholder-img-2 {
   // height: 450px;
   // width: auto;
+}
+
+// css example
+span {
+  content: "\2713";
 }
