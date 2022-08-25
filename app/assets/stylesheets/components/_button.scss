@@ -2,11 +2,23 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #670BFF;
+  background: #B9D798;
   transition: background 0.3s ease;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .btn-flat:hover {
-  background: #4D04C4;
+  background: #AFD189;
   color: white;
+}
+
+.btn-light {
+  background-color: #F9F8FD;
+  border-radius: 4px;
+  font-weight: 500;
+  &:hover {
+    background-color: #F9F8FD;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  }
 }
