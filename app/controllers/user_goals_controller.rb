@@ -17,7 +17,7 @@ class UserGoalsController < ApplicationController
       user_goal = UserGoal.create(user: current_user, description: description)
       authorize user_goal
     end
-    redirect_to user_goals_path
+    redirect_to dashboard_path
   end
 
   def update
