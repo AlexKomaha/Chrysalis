@@ -9,7 +9,6 @@
   &:hover {
     background: #AFD189;
     color: white;
-    border: none;
   }
 }
 
@@ -22,7 +21,6 @@
   font-size: 20px;
   &:hover {
     background-color: $pop-green;
-    border: none;
     color: white;
   }
 }
@@ -34,7 +32,6 @@
   padding: 3px 24px;
   font-weight: 500;
   font-size: 16px;
-  border: none;
   &:hover {
     background-color: #F9F8FD;
     box-shadow: 0 0 1px rgba(0,0,0,0.2);
@@ -63,7 +60,6 @@
   background: $pop-green;
   font-weight: 500;
   font-size: 16px;
-  border: none;
   &:hover {
     background-color: $pop-green;
     box-shadow: 0 0 1px rgba(45, 198, 75, 0.763);
