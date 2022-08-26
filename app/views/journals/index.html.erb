@@ -10,6 +10,27 @@
   </div>
   <div class="journals">
     <div class="container d-flex justify-content-center">
+      <div class="journal-box px-4 py-2">
+        <ul class="list-inline tabs-underlined">
+          <li>
+            <a href="#" class="tab-underlined active"><%= Date.today.year %></a>
+          </li>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Month
+            </button>
+            <ul class="dropdown-menu">
+              <% Date::MONTHNAMES[1..-1].each do |month| %>
+                <li><%= link_to month, journals_path(month: month) %></li>
+              <% end %>
+            </ul>
+          </div>
+        </ul>
+        <% @journals.each do |journal| %>
+          <div class="journal">
+            <%= link_to journal.title, journal_path(journal) %>
+          </div>
+        <% end %>
       <div>
         <div class="journal-box px-4 py-2">
           <% @journals.each do |journal| %>
