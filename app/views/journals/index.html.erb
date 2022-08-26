@@ -13,8 +13,9 @@
       <div>
         <div class="journal-box px-4 py-2">
           <% @journals.each do |journal| %>
-            <div class="journal">
+            <div class="journal d-flex justify-content-between">
               <%= link_to journal.title, journal_path(journal) %>
+              <%= journal.created_at.strftime('%Y/%m/%d') %>
             </div>
           <% end %>
         </div>
@@ -31,7 +32,7 @@
     </div>
   </div>
 </div>
-<div class="journal-each-year">
+<div class="Pjouournal-each-year">
   <div class="container d-flex">
     <div>
       <p>2022</p>
