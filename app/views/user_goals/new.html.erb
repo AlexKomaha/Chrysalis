@@ -5,7 +5,9 @@
   <%= simple_form_for @user_goal do |f| %>
     <fieldset class="form-group check_boxes optional user_goal_tags">
       <legend class="col-form-label py-4 text-center">Write a custom goal</legend>
-      <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Go grocery shopping' %>
+      <div style ="width: 50%; margin: auto;">
+        <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Go grocery shopping' %>
+      </div>
       <legend class="col-form-label pt-5 pb-4 text-center">Suggested goals for you</legend>
       <div class="d-flex justify-content-center align-items-center flex-wrap">
         <% @goals.each_with_index do |(goal), index| %>
