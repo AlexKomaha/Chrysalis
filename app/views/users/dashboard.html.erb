@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row gx-5">
     <div class="col-6">
-      <div class="p-3">
+      <div class="p-3 mt-3">
         <%= image_tag "target.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>Your goals for today</strong></h4>
         <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button" %>
@@ -11,9 +11,9 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="p-3">
+      <div class="p-3 mt-3">
         <%= image_tag "success.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>Goals you have accomplished</strong></h4>
+        <h4 class="text-left"><strong>Your recent goals</strong></h4>
         <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
         <div class="container">
           <%= render "users/goals_achieved" %>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="p-3 pb-5">
+      <div class="p-3 pb-5 mb-5">
         <%= image_tag "article.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>New article</strong></h4>
         <%= link_to "View more", "#", class: "btn btn-light dash-button" %>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="p-3 pb-5">
+      <div class="p-3 pb-5 mb-5">
         <%= image_tag "calendar.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>This month</strong></h4>
         <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>

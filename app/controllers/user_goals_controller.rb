@@ -24,8 +24,9 @@ class UserGoalsController < ApplicationController
 
   def update
     @user_goal = UserGoal.find(params[:id])
-    @user_goal.status = "done"
+    @user_goal.update(user_goal_params)
     authorize @user_goal
+    # head :ok
   end
 
   private

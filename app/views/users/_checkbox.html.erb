@@ -1,5 +1,12 @@
-<%# insert this file by render in user_goals loop %>
+<%# For the checkboxes on the dashboard %>
 <%= simple_form_for goal do |f| %>
-  <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-  <input type="checkbox" id="todo" name="todo" value="todo" onchange="edit_user_goal_<%= goal.id %>.submit()">
+  <div class="checkbox-animation">
+    <input type="checkbox" id="todo" name="todo" value="todo" onchange="edit_user_goal_<%= goal.id %>.submit()">
+    <label class="align-middle" for="todo" data-content="<%= goal.description %>"><%= goal.description %></label>
+  </div>
+  <% if goal.done? %>
+    <%= f.input :status, wrapper_html: {class: "my-0 position-absolute"}, as: :hidden, input_html: { value: 'active'} %>
+  <% else %>
+    <%= f.input :status, wrapper_html: {class: "my-0 position-absolute"}, as: :hidden, input_html: { value: 'done'} %>
+  <% end %>
 <% end %>
