@@ -6,9 +6,11 @@
 }
 
 .checkbox-animation {
+  display: flex;
+  align-items: center;
   input[type="checkbox"] {
     position: relative;
-    top: -4px;
+    top: 4px;
     left: -60px;
     width: 1.5em;
     height: 1.5em;
