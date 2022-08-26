@@ -7,7 +7,7 @@ User.create!(email: "koki@chrysalis.com", password: "123123", first_name: "Koki"
 User.create!(email: "alison@chrysalis.com", password: "123123", first_name: "Alison", last_name: "Jeffrey")
 User.create!(email: "sae@chrysalis.com", password: "123123", first_name: "Sae", last_name: "Matsuda")
 User.create!(email: "alex@chrysalis.com", password: "123123", first_name: "Alex", last_name: "Komaha")
-
+User.create!(email: "toshiro@chrysalis.com", password: "123123", first_name: "Toshiro", last_name: "Tanaka")
 puts "#{User.count} users created"
 
 User.all.each do |user|
