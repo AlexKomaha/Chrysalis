@@ -4,7 +4,7 @@
 </div>
 <div class="container d-flex justify-content-between mt-3 mb-3">
   <h2><i class="fa-solid fa-book"></i> Journal</h2>
-  <h2 class="date">Date</h2>
+  <h2 class="date"><%= @journal.created_at.strftime('%Y/%m/%d') %></h2>
 </div>
 <div class="container d-flex justify-content-center">
   <div class="content-wrapper">
@@ -12,7 +12,11 @@
       <%= @journal.title %>
     </h3>
     <p>
+    <% if @journal.content %>
+      <%= @journal.content %>
+    <% else %>
       <%= @journal.rich_content %>
+    <% end %>
     </p>
   </div>
 </div>

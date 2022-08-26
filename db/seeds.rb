@@ -23,10 +23,25 @@ User.all.each do |user|
 
   puts "Getting journal data"
 
-  10.times do
+  titles = ["I achieved my goals today!", "My talk with my doctor", "Today was a bad day", "Had a fight with my dad", "Might have been the worst day of my life", "Made lunch for the first time in a while", "Achieved 4 goals!!", "Kinda depressed", "Helped mom with some house chores", "Didn’t leave my room today", "Bad morning, good evening!", "Look back on my progress so far", "Almost left the house today", "Spoke with Nana-chan", "Today was a nothing day"]
+  contents = ["I achieved all goals today", "I went to see a doctor", "not feeling well", "I thought I started off my day really well today. I added goals to help mom out around the house and so I helped her to fold some laundry. We watched TV together as we folded up the laundry and it was a really nice afternoon. It’s been great to socialise with her more lately. But dad has still been distant.
+
+    I also wanted to work on running an errand out of the house. I thought I might go to the post office to send a package for my dad but I had that feeling in my chest again. As soon as I started to put on my shoes in the genkan, I started panicking and went back to my room. I didn’t come out for dinner so mom left my food outside my door again.
+
+    When my dad got back from work he suddenly exploded when he saw the undelivered package… I tried to explain that it was too hard today. But, he didn’t want to listen. He shouted at me again about how ashamed he is of me.
+
+    I’m going to try again tomorrow.", "All went wrong", "I made yakisoba which was really good", "Accomplished 4 goals", "I am kinda feeling depressed today", "Helped mom and feeling good", "I didn't leave my room", "I had a bad morning", "It’s been a while since I started using Chrysalis. I can see how I’ve improved but I still have a way to go yet.
+
+    I can’t believe how far I’ve come though. I don’t know if I could have done this alone. When I think back to when I first signed up, I never left my room and my parents were barely speaking to me. Mom understands my feelings a bit more now. I think dad is also coming around and can see that I’m making progress.
+
+    I want to be able to make them proud so I’m going to keep giving myself challenges and keep reaching goals.
+
+    Who knows, maybe I’ll have a job by the end of the year! Let’s only hope.", "Almost left the house, but I couldnt go out", "I called my best friend", "I didn't nothing today"]
+
+  titles.each_with_index do |title, index|
     Journal.create!(
-      title: Faker::Lorem.sentence,
-      content: Faker::Lorem.paragraphs,
+      title: title,
+      content: contents[index],
       user: user
     )
   end
