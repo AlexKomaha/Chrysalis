@@ -3,9 +3,11 @@
     <% if @today_goals.any? %>
       <% @today_goals.first(4).each do |goal| %>
         <div class="col-sm-12">
-          <div class="card-product my-4 mx-3">
-            <div class="card-product-infos">
-              <%= render "users/checkbox", goal: goal %></div>
+          <div class="container">
+            <div class="card-product my-4 mx-3">
+              <div class="card-product-infos">
+                <%= render "users/checkbox", goal: goal %></div>
+            </div>
           </div>
         </div>
       <% end %>
