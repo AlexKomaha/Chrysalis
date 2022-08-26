@@ -19,10 +19,26 @@
   margin-bottom: 20px;
 }
 
+
+a {
+  color: #292a2f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #dc8cad;
+ }
+
 .journal-title-wrapper {
+  position: relative;
+  margin-bottom: 1%;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+
 }
 
 .content-wrapper {
