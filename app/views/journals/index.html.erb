@@ -14,7 +14,9 @@
         <div class="journal-box px-4 py-2">
           <% @journals.each do |journal| %>
             <div class="journal d-flex justify-content-between">
+            <span class="d-inline-block text-truncate px-3" style="max-width: 230px;">
               <%= link_to journal.title, journal_path(journal) %>
+            </span>
               <%= journal.created_at.strftime('%Y/%m/%d') %>
             </div>
           <% end %>
