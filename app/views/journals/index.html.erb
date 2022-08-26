@@ -21,7 +21,7 @@
             </button>
             <ul class="dropdown-menu">
               <% Date::MONTHNAMES[1..-1].each do |month| %>
-                <li><%= link_to month, journals_path(month: month) %></li>
+                <li><%= link_to month, journals_path(month: month), class:"dropdown-item" %></li>
               <% end %>
             </ul>
           </div>
