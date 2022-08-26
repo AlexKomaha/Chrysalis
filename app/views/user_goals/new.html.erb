@@ -1,12 +1,12 @@
 <div class="container pt-5">
   <h1>Choose your daily goal</h1>
-  <h5 class="py-3">Set yourself a challenge and select more than one goal for the day.</h5>
+  <h6 class="py-3">Set yourself a challenge and select more than one goal for the day.</h6>
   <hr>
   <%= simple_form_for @user_goal do |f| %>
     <fieldset class="form-group check_boxes optional user_goal_tags">
-      <legend class="col-form-label py-4 text-center"><strong>Write a custom goal</strong></legend>
+      <legend class="col-form-label py-4 text-center">Write a custom goal</legend>
       <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Go grocery shopping' %>
-      <legend class="col-form-label pt-5 pb-4 text-center"><strong>Suggested goals for you</strong></legend>
+      <legend class="col-form-label pt-5 pb-4 text-center">Suggested goals for you</legend>
       <div class="d-flex justify-content-center align-items-center flex-wrap">
         <% @goals.each_with_index do |(goal), index| %>
           <div class="tag-item">

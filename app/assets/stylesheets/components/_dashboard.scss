@@ -1,6 +1,6 @@
 .dash-bg-color {
   // Just a placeholder color for the background
-  background-color: $pastel-green;
+  // background-color: $pastel-green;
 }
 
 .dash-icon {
@@ -13,7 +13,7 @@
 
 .dash-button {
   position: relative;
-  top: -42px;
+  top: -38px;
   left: 410px;
   background-color: #F9F8FD;
   border-radius: 30px;
@@ -24,13 +24,13 @@
   }
  }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(1fr);
-  grid-template-rows: repeat(1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-}
+// .parent {
+//   display: grid;
+//   grid-template-columns: repeat(1fr);
+//   grid-template-rows: repeat(1fr);
+//   grid-column-gap: 10px;
+//   grid-row-gap: 10px;
+// }
 
 .placeholder-img {
   height: 450px;

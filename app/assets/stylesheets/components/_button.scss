@@ -1,54 +1,72 @@
+// For the landing page
 .btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
   background: #B9D798;
-  transition: background 0.3s ease;
   font-weight: 700;
   font-size: 20px;
+  &:hover {
+    background: #AFD189;
+    color: white;
+    border: none;
+  }
 }
 
-.btn-flat:hover {
-  background: #AFD189;
+.btn-flat-start {
   color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $pop-green;
+  font-weight: 700;
+  font-size: 20px;
+  &:hover {
+    background-color: $pop-green;
+    border: none;
+    color: white;
+  }
 }
 
+// Used across the app
 .btn-light {
   background-color: #F9F8FD;
   border-radius: 30px;
+  padding: 3px 24px;
   font-weight: 500;
+  font-size: 16px;
+  border: none;
   &:hover {
     background-color: #F9F8FD;
     box-shadow: 0 0 1px rgba(0,0,0,0.2);
   }
 }
 
+// For the log in and sign up pages
 .btn-flat-devise {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
   background: #B9D798;
-  transition: background 0.3s ease;
   font-weight: 700;
   font-size: 20px;
+  &:hover {
+    background: #AFD189;
+    color: white;
+  }
 }
 
-.btn-flat-devise:hover {
-  background: #AFD189;
-  color: white;
-}
-
+// For adding new
 .btn-flat-save {
   color: white;
   padding: 3px 24px;
   border-radius: 30px;
-  background: #B9D798;
-  transition: background 0.3s ease;
-  font-weight: 400;
+  background: $pop-green;
+  font-weight: 500;
   font-size: 16px;
-}
-
-.btn-flat-save:hover {
-  background: #AFD189;
-  color: white;
+  border: none;
+  &:hover {
+    background-color: $pop-green;
+    box-shadow: 0 0 1px rgba(45, 198, 75, 0.763);
+    color: white;
+  }
 }
