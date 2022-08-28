@@ -30,6 +30,7 @@ class JournalsController < ApplicationController
     end
   end
 
+  # To format the date with st, rd, nd, th. E.g. 21st
   # def format(time)
   #   time.strftime("%A %-d, %l:%M%P").sub!(/\d?\d/) do |day|
   #     case day
