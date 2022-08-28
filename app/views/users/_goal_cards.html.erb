@@ -11,6 +11,8 @@
           </div>
         </div>
       <% end %>
+    <% else %>
+      <h6><%= "No goals added yet! Make sure to add a goal today!" if @today_goals.empty? %></h6>
     <% end %>
   </div>
 </div>

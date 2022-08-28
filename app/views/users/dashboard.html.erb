@@ -1,9 +1,12 @@
 <div class="container">
+  <%# Insert quote of the day%>
+</div>
+<div class="container">
   <div class="row gx-5">
     <div class="col-6">
       <div class="p-3 mt-3">
         <%= image_tag "target.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>Your goals for today</strong></h4>
+        <h4 class="text-left"><strong>Today's objectives</strong></h4>
         <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button" %>
         <div>
           <%= render "users/goal_cards" %>
@@ -13,10 +16,11 @@
     <div class="col-6">
       <div class="p-3 mt-3">
         <%= image_tag "success.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>Your recent goals</strong></h4>
+        <h4 class="text-left"><strong>Last 7 days</strong></h4>
         <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
         <div class="container">
           <%= render "users/goals_achieved" %>
+          <%# render "users/last_seven" %>
         </div>
       </div>
     </div>
