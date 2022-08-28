@@ -1,23 +1,22 @@
-<div class="container">
-<div class ="d-flex align-items-end flex-column">
-  <%= link_to "Back", journals_path, class: "btn btn-light" %>
+<div class='container py-5 col-8'>
+  <%= image_tag "journal.png", class: "journal-icon" %>
+  <h2><%= @journal.title %></h2>
+  <hr>
 </div>
-<div class="container d-flex justify-content-between mt-3 mb-3">
-  <h2><i class="fa-solid fa-book"></i> Journal</h2>
-  <h2 class="date"><%= @journal.created_at.strftime('%Y/%m/%d') %></h2>
-</div>
-<div class="container d-flex justify-content-center">
-  <div class="content-wrapper">
-    <h3>
-      <%= @journal.title %>
-    </h3>
-    <p>
-    <% if @journal.content %>
-      <%= @journal.content %>
-    <% else %>
-      <%= @journal.rich_content %>
-    <% end %>
-    </p>
+<div class='container mb-5 pb-5'>
+  <div class='container d-flex justify-content-center'>
+    <div class="content-wrapper">
+      <h6 class="mb-3"><%= @journal.created_at.strftime('%A %d %I:%M%p') %></h6>
+      <p>
+        <% if @journal.content %>
+          <%= @journal.content %>
+        <% else %>
+          <%= @journal.rich_content %>
+        <% end %>
+      </p>
+    </div>
   </div>
-</div>
+  <div class="container text-center">
+    <%= link_to "Back", journals_path, class: "btn btn-light" %>
+  </div>
 </div>

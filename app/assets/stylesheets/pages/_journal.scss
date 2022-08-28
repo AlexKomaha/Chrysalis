@@ -5,14 +5,16 @@
 
 .journal {
   width: 100%;
-  background-color: white;
+  background-color: $white;
   margin: 0.8em 0px;
   text-align: center;
   padding: 5px 35px;
 }
 
 .journal-box {
-  background-color: #D5DCF9;
+  background-color: $vibrant-green;
+  width: 800px;
+  height: auto;
 }
 
 .journals {
@@ -20,16 +22,16 @@
 }
 
 
-a {
-  color: #292a2f;
+.journal-link {
+  color: black;
   text-decoration: none;
+  font-size: 18px;
+  &:hover {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
 }
-
-a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: #dc8cad;
- }
 
 .journal-title-wrapper {
   position: relative;
@@ -38,11 +40,18 @@ a:hover {
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+}
 
+.journal-icon {
+  width: 50px;
+  height: auto;
+  position: relative;
+  top: 47px;
+  left: -63px;
 }
 
 .content-wrapper {
-  border : 1px solid gray;
+  // border : 1px solid gray;
   width: 60%;
   justify-content: center;
   padding: 1em;
@@ -50,7 +59,7 @@ a:hover {
 }
 
 .add-journal-wrapper {
-  border: 1px solid grey;
+  // border: 1px solid grey;
   margin: 30px;
   padding: 1em;
 }

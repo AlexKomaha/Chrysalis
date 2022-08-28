@@ -1,16 +1,16 @@
 <div class="container">
   <div class="journal-title-wrapper">
-    <div class="journal-titles">
-      <h1>Your journals</h1>
-      <p>This is a secondary title</p>
+    <div class="journal-titles mt-5">
+      <h1><strong>Your journals</strong></h1>
+      <h5>Add a new journal and write about your day. Read back your past journals to see how much you have improved!</h5>
     </div>
-    <div>
+    <div class="mt-5">
       <%= link_to "Add a journal", new_journal_path, class: "btn btn-light" %>
     </div>
   </div>
   <div class="journals">
-    <div class="container d-flex justify-content-center">
-      <div class="journal-box px-4 py-2">
+    <div class="container d-flex justify-content-center mt-5">
+      <div class="px-4 mb-5">
         <ul class="list-inline tabs-underlined">
           <li>
             <a href="#" class="tab-underlined active"><%= Date.today.year %></a>
@@ -21,53 +21,28 @@
             </button>
             <ul class="dropdown-menu">
               <% Date::MONTHNAMES[1..-1].each do |month| %>
-                <li><%= link_to month, journals_path(month: month), class:"dropdown-item" %></li>
+                <li>
+                  <%= link_to month, journals_path(month: month), class:"dropdown-item" %>
+                </li>
               <% end %>
             </ul>
           </div>
         </ul>
         <div>
-          <div class="journal-box px-4 py-2">
-            <% @journals.each do |journal| %>
-              <div class="journal d-flex justify-content-between">
-                <span class="d-inline-block text-truncate px-3" style="max-width: 230px;">
-                  <%= link_to journal.title, journal_path(journal) %>
-                </span>
-                <%= journal.created_at.strftime('%Y/%m/%d') %>
-              </div>
-            <% end %>
-          </div>
+          <% if @journals.any? %>
+            <div class="journal-box mt-5 px-4 py-2">
+              <% @journals.each do |journal| %>
+                <div class="journal d-flex justify-content-between">
+                  <span class="d-inline-block text-truncate" style="max-width: 600px;">
+                    <%= link_to journal.title, journal_path(journal), class: "journal-link" %>
+                  </span>
+                  <%= journal.created_at.strftime('%A %d %I:%M%p') %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
-  <%# <div class="container">
-  <div class="journal-wrapper">
-    <h1>Journals</h1>
-    <div class="journal-paragraph-wrapper">
-      <p>This is a secondary title</p>
-      <a class="btn btn-light" href="#">Add a journal</a>
-    </div>
-  </div>
 </div>
-<div class="Pjouournal-each-year">
-  <div class="container d-flex">
-    <div>
-      <p>2022</p>
-      <div class="month-box px-4 py-2">
-        <div class ="month">January</div>
-        <div class ="month">February</div>
-        <div class ="month">March</div>
-        <div class ="month">April</div>
-        <div class ="month">May</div>
-        <div class ="month">June</div>
-        <div class ="month">July</div>
-        <div class ="month">August</div>
-        <div class ="month">September</div>
-        <div class ="month">October</div>
-        <div class ="month">November</div>
-        <div class ="month">December</div>
-      </div>
-    </div>
-  </div>
-</div> %>
