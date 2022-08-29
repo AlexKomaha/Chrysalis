@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :user_goals, only: [:new, :create, :update, :index]
-  resources :emotions, only: [:new, :create, :index]
+  resources :emotions, only: [:new, :create, :index, :update]
   resources :journals, only: [:new, :create, :index, :show]
 
   get "/dashboard", to: "users#dashboard"
