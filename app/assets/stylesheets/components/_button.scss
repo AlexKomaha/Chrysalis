@@ -67,3 +67,22 @@
     color: white;
   }
 }
+
+// For the button on the emotions page
+.btn-flat-emotion {
+  color: white;
+  border: none;
+  padding: 3px 24px;
+  border-radius: 30px;
+  background: $pop-green;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  top: -47px;
+  left: 1000px;
+  &:hover {
+    background-color: $pop-green;
+    box-shadow: 0 0 1px rgba(45, 198, 75, 0.763);
+    color: white;
+  }
+}
