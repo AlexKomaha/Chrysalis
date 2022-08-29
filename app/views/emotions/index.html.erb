@@ -1,32 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>slider demo</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <style>#slider { margin: 10px; width: 600px; }  </style>
-  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-</head>
-<body>
 
-<h1>How are you feeling today?</h1>
-
-<div id="slider"></div>
-
-<script>
-$( "#slider" ).slider();
-$( ".selector" ).slider({
-  start: function( number, ui ) {}
-});
-
-$( ".selector" ).on( "slidestart", function( event, ui ) {} );
-$( ".selector" ).slider({
-  stop: function( number, ui ) {}
-});
-$( ".selector" ).on( "slidestop", function( number, ui ) {} );
-
-</script>
-
-</body>
-</html>
+<div class='container my-5'>
+  <div class="container">
+    <h1>Emotions Calendar</h1>
+    <%# Change the path to the correct path when created %>
+    <%= link_to "Add your emotion for today", emotions_path, class: "btn btn-flat-emotion" %>
+    <p>Here you can see your mental health mapped out in a calendar and colour coded.</p>
+    <p>Try and keep an eye on the pattern regularly. If you've not been feeling great, then make sure to adjust your goals for the day. The better you feel, the more you should try and achieve. But, if you're on a down day or week, take it easy and try and set goals that are achievable for you.</p>
+  </div>
+</div>
+<div class="container">
+  <h1>Your emotions calendar</h1>
+  <div class="calendar">
+    <%= month_calendar(attribute: :created_at, events: @emotions) do |date, emotions| %>
+      <div class="calendar-content emotion-<%= emotions.first.emotion_level if emotions.any? %>">
+      <% end %>
+    </div>
+  </div>
+</div>
