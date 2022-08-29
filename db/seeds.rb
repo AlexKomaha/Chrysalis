@@ -42,9 +42,11 @@ User.all.each do |user|
     Journal.create!(
       title: title,
       content: contents[index],
-      user: user
+      user: user,
+      created_at: Faker::Time.between_dates(from: Date.today - index, to: Date.today - index + 1, period: :day)
     )
   end
+
 
   puts "#{Journal.count} journals created"
 
