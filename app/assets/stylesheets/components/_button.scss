@@ -69,20 +69,17 @@
 }
 
 // For the button on the emotions page
-.btn-flat-emotion {
-  color: white;
-  border: none;
-  padding: 3px 24px;
+.btn-light-emotion {
+  background-color: #F9F8FD;
   border-radius: 30px;
-  background: $pop-green;
+  padding: 3px 24px;
   font-weight: 500;
   font-size: 16px;
   position: relative;
   top: -47px;
   left: 1000px;
   &:hover {
-    background-color: $pop-green;
-    box-shadow: 0 0 1px rgba(45, 198, 75, 0.763);
-    color: white;
+    background-color: #F9F8FD;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
   }
 }
