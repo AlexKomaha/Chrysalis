@@ -37,6 +37,7 @@
         <h4 class="text-left"><strong>This month</strong></h4>
         <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
         <%# Add partial here for emotions calendar (one month) %>
+        <%= render "users/emotions_calendar", emotions: @emotions %>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
       </div>

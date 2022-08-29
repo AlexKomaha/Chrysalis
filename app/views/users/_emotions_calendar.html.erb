@@ -1,1 +1,7 @@
 <%# For emotions calendar %>
+<div class="calendar">
+    <%= month_calendar(attribute: :created_at, events: @emotions) do |date, emotions| %>
+      <div class="calendar-content emotion-<%= emotions.first.emotion_level if emotions.any? %>">
+      <% end %>
+    </div>
+  </div>
