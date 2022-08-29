@@ -77,8 +77,11 @@ group :test do
   gem "webdrivers"
 end
 
-# Add faker
+# Add Faker
 gem 'faker'
 
-# Add pundit
+# Add Pundit
 gem "pundit"
+
+# Add Rest Client
+gem "rest-client"
