@@ -16,11 +16,12 @@
           <li class="nav-item dropdown">
             <%= image_tag "user (3).png", class: "avatar dropdown-toggle me-2", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="navbarDropdown">
-              <%= link_to "Emotions", emotions_path, class: "dropdown-item" %>
+              <%= link_to "Emotions Calendar", emotions_path, class: "dropdown-item" %>
               <%= link_to "Goals", user_goals_path, class: "dropdown-item" %>
               <%= link_to "Journal", journals_path, class: "dropdown-item" %>
               <%= link_to "Articles & Resources", "#", class: "dropdown-item" %>
               <%= link_to "Chat", "#", class: "dropdown-item border-bottom" %>
+              <%# Non-functional settings page %>
               <%= link_to "Settings", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
