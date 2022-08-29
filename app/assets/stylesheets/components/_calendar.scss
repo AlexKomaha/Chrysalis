@@ -1,0 +1,72 @@
+.calendar {
+  display: flex;
+  justify-content: center;
+}
+
+.simple-calendar {
+  .day {
+    .emotion-1 {
+      background-color: $emotion-1;
+    }
+
+    .emotion-2 {
+      background-color: $emotion-2;
+    }
+
+    .emotion-3 {
+      background-color: $emotion-3;
+    }
+
+    .emotion-4 {
+      background-color: $emotion-4;
+    }
+
+    .emotion-5 {
+      background-color: $emotion-5;
+    }
+
+    .emotion-6 {
+      background-color: $emotion-6;
+    }
+
+    .emotion-7 {
+      background-color: $emotion-7;
+    }
+
+    .emotion-8 {
+      background-color: $emotion-8;
+    }
+  }
+
+  .wday-0 {
+
+  }
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+
+  }
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {
+
+  }
+}
+
+.calendar-content {
+  width: 50px;
+  border-radius: 5px;
+  height: 100%;
+}

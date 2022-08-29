@@ -14,7 +14,7 @@ User.all.each do |user|
   puts "Getting emotions data"
   (1..20).each do |num|
     Emotion.create!(
-      emotion_level: rand(1..20),
+      emotion_level: rand(1..8),
       user: user,
       created_at: Date.today - num
     )
@@ -42,7 +42,8 @@ User.all.each do |user|
     Journal.create!(
       title: title,
       content: contents[index],
-      user: user
+      user: user,
+      created_at: Faker::Time.between_dates(from: Date.today - index, to: Date.today - index, period: :day)
     )
   end
 

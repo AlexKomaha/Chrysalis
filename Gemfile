@@ -85,3 +85,7 @@ gem "pundit"
 
 # Add Rest Client
 gem "rest-client"
+
+# Add calendar
+gem "simple_calendar", "~> 2.4"
+
