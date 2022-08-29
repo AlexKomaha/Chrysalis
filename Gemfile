@@ -82,3 +82,6 @@ gem 'faker'
 
 # Add pundit
 gem "pundit"
+
+# Add calendar
+gem "simple_calendar", "~> 2.4"

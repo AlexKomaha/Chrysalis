@@ -7,3 +7,13 @@
     <p>Try and keep an eye on the pattern regularly. If you've not been feeling great, then make sure to adjust your goals for the day. The better you feel, the more you should try and achieve. But, if you're on a down day or week, take it easy and try and set goals that are achievable for you.</p>
   </div>
 </div>
+<div class="container">
+  <h1>Your emotions calendar</h1>
+  <div class="calendar">
+    <%= month_calendar(attribute: :created_at, events: @emotions) do |date, emotions| %>
+      <div class="calendar-content emotion-<%= emotions.first.emotion_level if emotions.any? %>">
+      <% end %>
+    </div>
+  </div>
+</div>
+<h1>Custom</h1>
