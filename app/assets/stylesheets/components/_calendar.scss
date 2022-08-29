@@ -118,6 +118,10 @@
   align-items: center;
   padding-bottom: 5px;
 
+  .calendar-title {
+    font-weight: bold;
+  }
+
   a {
     background-image: linear-gradient(
       to right,
