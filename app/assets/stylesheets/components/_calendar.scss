@@ -166,3 +166,7 @@
     width: 100%;
   }
 }
+
+.table.table-striped {
+  --bs-table-striped-bg: initial;
+}
