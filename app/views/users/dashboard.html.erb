@@ -1,25 +1,25 @@
 <div class="container" data-controller="quotes">
-<div class="container h-100 mt-3">
-  <div class="row d-flex justify-content-center align-items-center h-100">
-    <div class="card" style="border-radius: 15px;">
-      <div class="card-body">
-        <figure class="text-center mb-0">
-          <blockquote class="blockquote">
-            <p class="pb-3">
-              <i class="fas fa-quote-left fa-xs text-success"></i>
-              <span class="lead font-italic">Many of life's failures are people who did not realize how
-                close they were to success when they gave up.</span>
-              <i class="fas fa-quote-right fa-xs text-success"></i>
-            </p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0">
-            Thomas Edison
-          </figcaption>
-        </figure>
+  <div class="container h-100 mt-3">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="card" style="border-radius: 15px;">
+        <div class="card-body">
+          <figure class="text-center mb-0">
+            <blockquote class="blockquote">
+              <p class="pb-3">
+                <i class="fas fa-quote-left fa-xs text-success"></i>
+                <span class="lead font-italic">Many of life's failures are people who did not realize how
+                  close they were to success when they gave up.</span>
+                <i class="fas fa-quote-right fa-xs text-success"></i>
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0">
+              Thomas Edison
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 <div class="container">
   <div class="row gx-5">
@@ -50,7 +50,6 @@
         <%= image_tag "article.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>Latest article</strong></h4>
         <%= link_to "View more", "#", class: "btn btn-light dash-button" %>
-        <%# Add a partial here for the newest article %>
         <div class="container">
           <%= render "users/newest_article" %>
         </div>
@@ -63,14 +62,10 @@
         <%= image_tag "calendar.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>This month</strong></h4>
         <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
-        <%# Add partial here for emotions calendar (one month) %>
-        <div class="dashboard-calendar">
-        <div class="calendar-container">
         <%= render "users/emotions_dashboard", emotions: @emotions %>
-        </div>
-        </div>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
+      </div>
     </div>
   </div>
 </div>
