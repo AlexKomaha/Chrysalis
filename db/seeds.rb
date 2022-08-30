@@ -24,6 +24,7 @@ User.all.each do |user|
   puts "Getting journal data"
 
   titles = ["I achieved my goals today!", "My talk with my doctor", "Today was a bad day", "Had a fight with my dad", "Might have been the worst day of my life", "Made lunch for the first time in a while", "Achieved 4 goals!!", "Kinda depressed", "Helped mom with some house chores", "Didn’t leave my room today", "Bad morning, good evening!", "Look back on my progress so far", "Almost left the house today", "Spoke with Nana-chan", "Today was a nothing day"]
+
   contents = ["I achieved all goals today", "I went to see a doctor", "not feeling well", "I thought I started off my day really well today. I added goals to help mom out around the house and so I helped her to fold some laundry. We watched TV together as we folded up the laundry and it was a really nice afternoon. It’s been great to socialise with her more lately. But dad has still been distant.
 
     I also wanted to work on running an errand out of the house. I thought I might go to the post office to send a package for my dad but I had that feeling in my chest again. As soon as I started to put on my shoes in the genkan, I started panicking and went back to my room. I didn’t come out for dinner so mom left my food outside my door again.
@@ -43,7 +44,7 @@ User.all.each do |user|
       title: title,
       content: contents[index],
       user: user,
-      created_at: Faker::Time.between_dates(from: Date.today - index, to: Date.today - index, period: :day)
+      created_at: Faker::Time.between_dates(from: Date.new(2022, 9, 1) - index, to: Date.new(2022, 9, 1) - index, period: :day)
     )
   end
 
