@@ -1,1 +1,16 @@
-<%# The newest article on the app %>
+<div class='container pt-3'>
+  <% @articles.last(1).each do |article| %>
+    <div class="card-trip-article mb-5">
+      <%= image_tag article.image_url, alt: article.title %>
+      <div>
+        <div class="card-trip-infos-article">
+          <div>
+            <h2 class="d-inline-block"><strong><%= article.title %></strong></h2>
+            <p class='mb-2'><strong><%= article.author %></strong></p>
+            <%= link_to "", article.url, class: "card-link" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

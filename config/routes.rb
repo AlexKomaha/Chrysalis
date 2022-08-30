@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :user_goals, only: [:new, :create, :update, :index]
   resources :emotions, only: [:new, :create, :index, :update]
   resources :journals, only: [:new, :create, :index, :show]
-  resources :articles, only: [:show, :index]
+  resources :articles, only: [:index]
 
   get "/dashboard", to: "users#dashboard"
   # get "/user_goals/new", to: "user_goals#new"
