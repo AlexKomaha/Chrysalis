@@ -7,7 +7,8 @@ class ArticlesController < ApplicationController
     @markers = @locations.geocoded.map do |location|
       {
         lat: location.latitude,
-        lng: location.longitude
+        lng: location.longitude,
+        popup_html: render_to_string(partial: 'articles/map_popup', locals: { location: location })
       }
     end
   end
