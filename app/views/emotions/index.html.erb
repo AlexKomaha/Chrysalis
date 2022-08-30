@@ -4,11 +4,11 @@
     <button type="button" class="btn btn-light btn-light-emotion" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       Add your emotion for today
     </button>
-    <p>Here you can see your mental health mapped out in a calendar and colour coded.</p>
+    <h5 class="pb-3">Here you can see your mental health mapped out in a calendar and colour coded.</h5>
     <p>Try and keep an eye on the pattern regularly. If you've not been feeling great, then make sure to adjust your goals for the day. The better you feel, the more you should try and achieve. But, if you're on a down day or week, take it easy and try and set goals that are achievable for you.</p>
   </div>
 </div>
-<div class="box-wrapper">
+<div class="box-wrapper py-3">
   <%= image_tag "sad (1).png", alt: "text", class: "emotion-icon" %>
   <div class="boxes">
     <div class="emotion-box emotion-1"></div>
@@ -21,7 +21,7 @@
   </div>
   <%= image_tag "smile.png", alt: "text", class: "emotion-icon" %>
 </div>
-<div class="container py-5">
+<div class="container py-5 mb-5">
   <div class="calendar">
     <%= month_calendar(attribute: :created_at, events: @emotions) do |date, emotions| %>
       <div class="calendar-content emotion-<%= emotions.first.emotion_level if emotions.any? %>">
