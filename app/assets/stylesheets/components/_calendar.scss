@@ -5,6 +5,8 @@
 
 .simple-calendar {
   .day {
+    background-color: white;
+
     .emotion-1 {
       background-color: $emotion-1;
     }
@@ -35,7 +37,6 @@
   }
 
   .wday-0 {
-
   }
   .wday-1 {}
   .wday-2 {}
