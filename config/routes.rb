@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :user_goals, only: [:new, :create, :update, :index]
-  resources :emotions, only: [:new, :create, :index]
+  resources :emotions, only: [:new, :create, :index, :update]
   resources :journals, only: [:new, :create, :index, :show]
   resources :articles, only: [:show, :index]
 

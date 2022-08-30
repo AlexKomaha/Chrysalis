@@ -37,7 +37,8 @@
   color: $black;
   // color: white;
   &:hover {
-    font-weight: 600;
+    // font-weight: 600;
+    text-decoration: underline;
     color: $black;
     // color: white;
   }

@@ -5,4 +5,7 @@ class EmotionPolicy < ApplicationPolicy
       scope.where(user: user)
     end
   end
+  def update?
+    record.user == user
+  end
 end
