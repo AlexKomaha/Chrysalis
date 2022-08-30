@@ -1,12 +1,12 @@
 <div class="container pt-5">
-  <h1>Set your daily objective</h1>
+  <h1>Set your daily objectives</h1>
   <h6 class="py-3">Write a custom goal and/or select a suggested goal from the list below. If you want to give yourself a challenge, select more than one goal for the day!</h6>
   <hr>
   <%= simple_form_for @user_goal do |f| %>
     <fieldset class="form-group check_boxes optional user_goal_tags">
       <legend class="col-form-label py-4 text-center">Your custom goal</legend>
-       <div style ="width: 50%; margin: auto;">
-      <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Go grocery shopping' %>
+      <div style ="width: 50%; margin: auto;">
+        <%= text_field_tag "user_goal[descriptions][]", nil, class: "form-control", placeholder: 'E.g. Go grocery shopping' %>
       </div>
       <legend class="col-form-label pt-5 pb-4 text-center">Suggested goals for you</legend>
       <div class="d-flex justify-content-center align-items-center flex-wrap">
