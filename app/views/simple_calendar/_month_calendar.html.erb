@@ -7,6 +7,9 @@
     <% unless @header %>
       <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
     <% end %>
+  <% unless @header %>
+    <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
+  <% end %>
   </div>
   <table class="table table-striped">
     <thead>

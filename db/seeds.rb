@@ -23,7 +23,8 @@ User.all.each do |user|
 
   puts "Getting journal data"
 
-  titles = ["I achieved my goals today!", "My talk with my doctor", "Today was a bad day", "Had a fight with my dad", "Might have been the worst day of my life", "Made lunch for the first time in a while", "Achieved 4 goals!!", "Kinda depressed", "Helped mom with some house chores", "Didn’t leave my room today", "Bad morning, good evening!", "Look back on my progress so far", "Almost left the house today", "Spoke with Nana-chan", "Today was a nothing day"]
+  titles = ["I achieved my goals today!", "My talk with my doctor", "Today was a bad day", "Had a fight with my dad", "Might have been the worst day of my life", "Made lunch for the first time in a while", "Achieved 4 goals!!", "Kinda depressed", "Helped mom with some house chores", "Didn’t leave my room today", "Bad morning, good evening!", "Look back on my progress so far", "Almost left the house today", "Spoke with Nana-chan", "Today was a nothing day","An anxious and slow day", "Feeling better", "Dad and I", "Ughhhhh", "Dear journal…", "I want to make friends again", "In the garden", "Exercise!", "Today was a good day", "Grandma", "Doctor’s appointment", "Sleep pattern", "Bad dreams", "Mom’s birthday", "This week’s progress", "A sense of relief", "A great day today!"]
+
   contents = ["I achieved all goals today", "I went to see a doctor", "not feeling well", "I thought I started off my day really well today. I added goals to help mom out around the house and so I helped her to fold some laundry. We watched TV together as we folded up the laundry and it was a really nice afternoon. It’s been great to socialise with her more lately. But dad has still been distant.
 
     I also wanted to work on running an errand out of the house. I thought I might go to the post office to send a package for my dad but I had that feeling in my chest again. As soon as I started to put on my shoes in the genkan, I started panicking and went back to my room. I didn’t come out for dinner so mom left my food outside my door again.
@@ -36,14 +37,14 @@ User.all.each do |user|
 
     I want to be able to make them proud so I’m going to keep giving myself challenges and keep reaching goals.
 
-    Who knows, maybe I’ll have a job by the end of the year! Let’s only hope.", "Almost left the house, but I couldnt go out", "I called my best friend", "I didn't nothing today"]
+    Who knows, maybe I’ll have a job by the end of the year! Let’s only hope.", "Almost left the house, but I couldnt go out", "I called my best friend", "I didn't nothing today", "I feel anxious today", "I am feeling better thant yesterday!", "I love my dad and he has been my hero", "I don't even know how to express my feelings", "I have written journals alsmot for a month", "I want to make friends again", "I saw beautiful flowers in my garden", "I did some exercise today!", "I felt really good today!", "I miss my grandma", "I went to see a foctor today", "I think my sleep pattern is getting better", "I had a nightmare yesterday", "Today was mom's birthday", "It has been really good this week", "I am relieved", "It was an amaging day!"]
 
   titles.each_with_index do |title, index|
     Journal.create!(
       title: title,
       content: contents[index],
       user: user,
-      created_at: Faker::Time.between_dates(from: Date.today - index, to: Date.today - index, period: :day)
+      created_at: Faker::Time.between_dates(from: Date.new(2022, 9, 1) - index, to: Date.new(2022, 9, 1) - index, period: :evening)
     )
   end
 

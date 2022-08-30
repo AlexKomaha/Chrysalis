@@ -10,8 +10,10 @@ class UsersController < ApplicationController
     @today_goals = UserGoal.where(created_at: Date.today.all_day) && UserGoal.where(status: "active")
     @colors = ["blue", "green", "purple", "orange"]
     @emotions = current_user.emotions
+    response = fetch_quotes
+    @quotes = response[:quote]
+    @author = response[:author]
     @articles = Article.where(title: "What You Can Do to Cope With Anxiety")
-    @quotes = fetch_quotes
     @header = true
   end
 
@@ -19,8 +21,15 @@ class UsersController < ApplicationController
     url = "https://zenquotes.io/api/quotes"
     response = URI.open(url).read
     quotes_array = JSON.parse(response)
-    quotes_array.first["q"]
+    {quote: quotes_array.first["q"], author: quotes_array.first["a"]}
   end
+
+  # def fetch_author
+  #   url = "https://zenquotes.io/api/quotes"
+  #   response = URI.open(url).read
+  #   quotes_array = JSON.parse(response)
+  #   quotes_array.first["a"]
+  # end
 
   # def fetch_quotes
   #   require "json"
