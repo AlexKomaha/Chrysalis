@@ -103,14 +103,29 @@
   background-color: $emotion-8;
 }
 
-.emotion-box {
-  height: 20px;
-  width: 20px;
-}
 
+
+// emoji indicator
 .box-wrapper {
   display: flex;
+  border: 1px solid magenta;
+  justify-content: center;
 }
+.emotion-box {
+  height: 40px;
+  width: 40px;
+}
+
+.fa-solid.fa-face-sad-tear, .fa-solid.fa-face-laugh {
+  font-size: 40px;
+}
+
+.boxes {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+}
+
 
 .calendar-heading {
   display: flex;
