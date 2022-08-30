@@ -6,6 +6,6 @@ class UsersController < ApplicationController
     @today_goals = UserGoal.where(created_at: Date.today.all_day) && UserGoal.where(status: "active")
     @colors = ["blue", "green", "purple", "orange"]
     @emotions = current_user.emotions
-    # @articles =
+    @articles = Article.where(title: "What You Can Do to Cope With Anxiety")
   end
 end

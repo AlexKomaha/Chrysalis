@@ -54,11 +54,11 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   border-radius: 10px;
   margin: 20px;
   &:hover {
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
 }
 
@@ -115,6 +115,63 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+// For dashboard article card
+.card-trip-article {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin: 20px;
+  height: 430px;
+  position: relative;
+  top: -15px;
+  left: -50px;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+}
+
+.card-trip-article > img {
+  height: 338px;
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+.card-trip-article h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-trip-article p {
+  font-size: 14px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-trip-article .card-trip-infos-article {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos-article .card-trip-pricing-article {
+  position: absolute;
+  right: 15px;
+  top: 90px;
+  width: 40px;
+  text-align: center;
+}
+
+.card-trip-infos-article .badge {
+  margin-bottom: auto;
+  margin-top: 10px;
+  justify-content: center;
 }
 
 // Smallest device

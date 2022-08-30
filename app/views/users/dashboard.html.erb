@@ -38,19 +38,18 @@
         <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
         <div class="container">
           <%= render "users/goals_achieved" %>
-          <%# render "users/last_seven" %>
+          <%#= render "users/last_seven" %>
         </div>
       </div>
     </div>
     <div class="col-6">
       <div class="p-3 pb-5 mb-5">
         <%= image_tag "article.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>New article</strong></h4>
+        <h4 class="text-left"><strong>Latest article</strong></h4>
         <%= link_to "View more", "#", class: "btn btn-light dash-button" %>
         <%# Add a partial here for the newest article %>
         <div class="container">
-          <%#= render "users/newest_article" %>
-          <%# render "users/last_seven" %>
+          <%= render "users/newest_article" %>
         </div>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
