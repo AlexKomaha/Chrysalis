@@ -1,13 +1,13 @@
 class JournalsController < ApplicationController
   def index
-    @journals = policy_scope(Journal).order(created_at: :desc)
+    @journals = policy_scope(Journal).order(created_at: :asc)
 
     if params[:month]
       month_number = Date::MONTHNAMES.index(params[:month])
       @journals = @journals.where('extract(month from created_at) = ?', month_number)
       # authorize @journals
     else
-      @journals = @journals.where('extract(month from created_at) = ?', Date.today.month)
+      @journals = @journals.where('extract(month from created_at) = ?', Date.new(2022, 9, 1).month)
     end
   end
 
