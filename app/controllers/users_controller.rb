@@ -11,13 +11,14 @@ class UsersController < ApplicationController
     @colors = ["blue", "green", "purple", "orange"]
     @emotions = current_user.emotions
     @quotes = fetch_quotes
+    @header = true
   end
 
   def fetch_quotes
     url = "https://zenquotes.io/api/quotes"
     response = URI.open(url).read
     quotes_array = JSON.parse(response)
-    quotes_array.first
+    quotes_array.first["q"]
   end
 
   # def fetch_quotes
