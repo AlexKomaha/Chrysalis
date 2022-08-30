@@ -1,3 +1,4 @@
+<div class="container" data-controller="quotes">
 <div class="container h-100 mt-3">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="card" style="border-radius: 15px;">
@@ -19,8 +20,10 @@
     </div>
   </div>
 </div>
+</div>
 <div class="container">
   <div class="row gx-5">
+    <h2 data-quotes-target="quotes">Inspirational quote of the day: <%= @quotes %></h2>
     <div class="col-6">
       <div class="p-3 mt-3">
         <%= image_tag "target.png", class: "dash-icon" %>
@@ -53,14 +56,18 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="p-3 pb-5 mb-5">
+      <div class="p-3 pb-5 mb-5 w-100">
         <%= image_tag "calendar.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>This month</strong></h4>
         <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
-        <%= render "users/emotions_calendar", emotions: @emotions %>
+        <%# Add partial here for emotions calendar (one month) %>
+        <div class="dashboard-calendar">
+        <div class="calendar-container">
+        <%= render "users/emotions_dashboard", emotions: @emotions %>
+        </div>
+        </div>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
-      </div>
     </div>
   </div>
 </div>
