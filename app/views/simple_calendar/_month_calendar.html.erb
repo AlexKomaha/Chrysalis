@@ -4,6 +4,9 @@
       <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view %>
     <% end %>
     <span class="calendar-title <%= "text-center w-100" if @header %>"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
+    <% unless @header %>
+      <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
+    <% end %>
   <% unless @header %>
     <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
   <% end %>

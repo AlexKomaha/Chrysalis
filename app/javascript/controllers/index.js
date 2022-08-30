@@ -7,8 +7,11 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import WellDoneModalController from "./well_done_modal_controller"
-application.register("well-done-modal", WellDoneModalController)
+import MapController from "./map_controller"
+application.register("map", MapController)
 
 import QuotesController from "./quotes_controller"
 application.register("quotes", QuotesController)
+
+import WellDoneModalController from "./well_done_modal_controller"
+application.register("well-done-modal", WellDoneModalController)

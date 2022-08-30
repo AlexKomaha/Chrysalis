@@ -91,3 +91,6 @@ gem "simple_calendar", "~> 2.4"
 
 # Add http
 gem "http"
+
+# Add geocode
+gem "geocoder"
