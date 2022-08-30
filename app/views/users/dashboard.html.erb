@@ -7,13 +7,12 @@
           <blockquote class="blockquote">
             <p class="pb-3">
               <i class="fas fa-quote-left fa-xs text-success"></i>
-              <span class="lead font-italic">Many of life's failures are people who did not realize how
-                close they were to success when they gave up.</span>
+              <span class="lead font-italic" data-quotes-target="quotes"><%= @quotes %></span>
               <i class="fas fa-quote-right fa-xs text-success"></i>
             </p>
           </blockquote>
-          <figcaption class="blockquote-footer mb-0">
-            Thomas Edison
+          <figcaption class="blockquote-footer mb-0" data-quotes-target="author">
+            <%= @author %>
           </figcaption>
         </figure>
       </div>
@@ -23,7 +22,6 @@
 </div>
 <div class="container">
   <div class="row gx-5">
-    <h2 data-quotes-target="quotes">Inspirational quote of the day: <%= @quotes %></h2>
     <div class="col-6">
       <div class="p-3 mt-3">
         <%= image_tag "target.png", class: "dash-icon" %>
