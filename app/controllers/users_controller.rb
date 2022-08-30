@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     response = fetch_quotes
     @quotes = response[:quote]
     @author = response[:author]
+    @articles = Article.where(title: "What You Can Do to Cope With Anxiety")
     @header = true
   end
 

@@ -19,7 +19,6 @@
     </div>
   </div>
 </div>
-</div>
 <div class="container">
   <div class="row gx-5">
     <div class="col-6">
@@ -35,20 +34,22 @@
     <div class="col-6">
       <div class="p-3 mt-3">
         <%= image_tag "success.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>Last 7 days</strong></h4>
+        <h4 class="text-left"><strong>My accomplished goals</strong></h4>
         <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
         <div class="container">
           <%= render "users/goals_achieved" %>
-          <%# render "users/last_seven" %>
+          <%#= render "users/last_seven" %>
         </div>
       </div>
     </div>
     <div class="col-6">
       <div class="p-3 pb-5 mb-5">
         <%= image_tag "article.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>New article</strong></h4>
+        <h4 class="text-left"><strong>Latest article</strong></h4>
         <%= link_to "View more", "#", class: "btn btn-light dash-button" %>
-        <%# Add a partial here for the newest article %>
+        <div class="container">
+          <%= render "users/newest_article" %>
+        </div>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
       </div>
@@ -58,14 +59,10 @@
         <%= image_tag "calendar.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>This month</strong></h4>
         <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
-        <%# Add partial here for emotions calendar (one month) %>
-        <div class="dashboard-calendar">
-        <div class="calendar-container">
         <%= render "users/emotions_dashboard", emotions: @emotions %>
-        </div>
-        </div>
         <%# Placeholder image %>
         <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
+      </div>
     </div>
   </div>
 </div>

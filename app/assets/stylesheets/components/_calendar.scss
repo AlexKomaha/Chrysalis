@@ -1,10 +1,14 @@
 .calendar {
   padding: 0 70px;
+  &.calendar-small .day {
+    height: 60px;
+  }
 }
 
 .simple-calendar {
   .day {
     background-color: white;
+    height: 120px;
 
     .emotion-1 {
       background-color: $emotion-1;
@@ -102,7 +106,6 @@
   background-color: $emotion-7;
 }
 
-
 // emoji indicator
 .box-wrapper {
   display: flex;
@@ -113,8 +116,9 @@
   width: 40px;
 }
 
-.fa-solid.fa-face-sad-tear, .fa-solid.fa-face-laugh {
-  font-size: 40px;
+.emotion-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .boxes {
