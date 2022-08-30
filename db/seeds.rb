@@ -14,7 +14,7 @@ User.all.each do |user|
   puts "Getting emotions data"
   (1..20).each do |num|
     Emotion.create!(
-      emotion_level: rand(1..8),
+      emotion_level: rand(1..7),
       user: user,
       created_at: Date.today - num
     )
