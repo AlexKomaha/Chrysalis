@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import WellDoneModalController from "./well_done_modal_controller"
 application.register("well-done-modal", WellDoneModalController)
+
+import QuotesController from "./quotes_controller"
+application.register("quotes", QuotesController)

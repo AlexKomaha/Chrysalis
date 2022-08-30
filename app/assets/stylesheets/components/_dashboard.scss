@@ -46,3 +46,13 @@
 span {
   content: "\2713";
 }
+
+.dashboard-calendar {
+  position: relative;
+  height: 500px;
+}
+
+.calendar-container {
+  position: absolute;
+  left: 15px;
+}
