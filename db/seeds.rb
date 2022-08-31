@@ -116,239 +116,240 @@ User.all.each do |user|
     UserGoal.create!(
       description: "Take a shower or a bath",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   5.times do
     UserGoal.create!(
       description: "Take a shower or a bath",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   24.times do
     UserGoal.create!(
       description: "Make my bed",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   30.times do
     UserGoal.create!(
       description: "Make my bed",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   24.times do
     UserGoal.create!(
       description: "Make myself lunch",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   8.times do
     UserGoal.create!(
       description: "Make myself lunch",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   18.times do
     UserGoal.create!(
       description: "Talk to a family member or friend",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   8.times do
     UserGoal.create!(
       description: "Talk to a family member or friend",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   46.times do
     UserGoal.create!(
       description: "Brush my teeth",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   10.times do
     UserGoal.create!(
       description: "Brush my teeth",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   20.times do
     UserGoal.create!(
       description: "Wash the dishes",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   13.times do
     UserGoal.create!(
       description: "Wash the dishes",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   5.times do
     UserGoal.create!(
       description: "Take a short walk",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   6.times do
     UserGoal.create!(
       description: "Take a short walk",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   3.times do
     UserGoal.create!(
       description: "Clean my room",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   1.times do
     UserGoal.create!(
       description: "Clean my room",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   5.times do
     UserGoal.create!(
       description: "Change clothes",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   2.times do
     UserGoal.create!(
       description: "Change clothes",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   1.times do
     UserGoal.create!(
       description: "Call my grandma",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   4.times do
     UserGoal.create!(
       description: "Watch TV with my mother",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   3.times do
     UserGoal.create!(
       description: "Watch TV with my mother",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   5.times do
     UserGoal.create!(
       description: "Take the dog for a walk",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   2.times do
     UserGoal.create!(
       description: "Take the dog for a walk",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   1.times do
     UserGoal.create!(
       description: "Organise my manga collection",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   2.times do
     UserGoal.create!(
       description: "Make an appointment with my doctor",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   3.times do
     UserGoal.create!(
       description: "Go to doctor's appointment",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   1.times do
     UserGoal.create!(
       description: "Go to the drugstore and buy toilet paper",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   1.times do
     UserGoal.create!(
       description: "Call my friend and see if he wants to come over",
       user: user,
-      status: "inactive"
-    )
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   3.times do
     UserGoal.create!(
       description: "Take out the trash",
       user: user,
-      status: "done"
-    )
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30)))
   end
 
   2.times do
     UserGoal.create!(
       description: "Take out the trash",
       user: user,
-      status: "inactive"
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
     )
   end
 
@@ -356,7 +357,8 @@ User.all.each do |user|
     UserGoal.create!(
       description: "Do my laundry",
       user: user,
-      status: "done"
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
     )
   end
 
@@ -364,7 +366,8 @@ User.all.each do |user|
     UserGoal.create!(
       description: "Go to the support centre",
       user: user,
-      status: "done"
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
     )
   end
 
@@ -372,7 +375,8 @@ User.all.each do |user|
     UserGoal.create!(
       description: "Go to the convenience store",
       user: user,
-      status: "done"
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
     )
   end
 
@@ -380,7 +384,8 @@ User.all.each do |user|
     UserGoal.create!(
       description: "Go to the convenience store",
       user: user,
-      status: "inactive"
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
     )
   end
 

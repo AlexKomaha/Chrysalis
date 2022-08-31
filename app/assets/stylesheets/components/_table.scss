@@ -1,10 +1,15 @@
 table {
   border: 1px solid #DDDDDD;
-  box-shadow: 1px 1px 1px #DDDDDD;
-  background-image: url("task.jpeg");
-  background-size: cover;
-  background-color:rgba(255,255,255,0.8);
-  background-blend-mode:lighten;
+  // border-radius: 5px;
+  // box-shadow: 1px 1px 1px #DDDDDD;
+  // background-image: url("task.jpeg");
+  // background-size: cover;
+  // background-color:rgba(255,255,255,0.8);
+  // background-blend-mode:lighten;
+}
+
+.seven-wrapper {
+
 }
 
 .seven-header {
@@ -18,4 +23,11 @@ td {
 th {
   padding: 10px 10px;
 
+}
+
+.status-pill {
+  border-radius: 30px;
+  width: auto;
+  height: auto;
+  background-color: green;
 }
