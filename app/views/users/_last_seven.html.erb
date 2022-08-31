@@ -1,3 +1,44 @@
-<%# List the activity from the last seven days %>
-<%# Show date, activity, status, perhaps emotion for that day %>
-<%# Add a placeholder for if the user hasn't used the app for seven days %>
+<div class="seven-wrapper">
+  <div class="table-container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <table>
+          <thead class="seven-header">
+            <tr>
+              <th>DATE</th>
+              <th>TASK</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= current_user.user_goals.last.created_at.strftime("%m/%d") %></td>
+              <td><%= current_user.user_goals.last.description %></td>
+              <td><%= current_user.user_goals.last.status %></td>
+            </tr>
+            <tr>
+              <td><%= current_user.user_goals[-2].created_at.strftime("%m/%d") %></td>
+              <td><%= current_user.user_goals[-2].description %></td>
+              <td><%= current_user.user_goals[-2].status %></td>
+            </tr>
+            <tr>
+              <td><%= current_user.user_goals[-3].created_at.strftime("%m/%d") %></td>
+              <td><%= current_user.user_goals[-3].description %></td>
+              <td><%= current_user.user_goals[-3].status %></td>
+            </tr>
+            <tr>
+              <td><%= current_user.user_goals[-4].created_at.strftime("%m/%d") %></td>
+              <td><%= current_user.user_goals[-4].description %></td>
+              <td><%= current_user.user_goals[-4].status %></td>
+            </tr>
+            <tr>
+              <td><%= current_user.user_goals[-5].created_at.strftime("%m/%d") %></td>
+              <td><%= current_user.user_goals[-5].description %></td>
+              <td><%= current_user.user_goals[-5].status %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
