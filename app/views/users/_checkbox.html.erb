@@ -1,7 +1,7 @@
 <%# For the checkboxes on the dashboard %>
 <%= simple_form_for goal do |f| %>
   <div class="checkbox-animation">
-    <input type="checkbox" id="todo" name="todo" value="todo" onchange="edit_user_goal_<%= goal.id %>.submit()">
+    <input type="checkbox" data-completed-goals-target="checkbox" id="todo" name="todo" value="todo" onchange="edit_user_goal_<%= goal.id %>.submit()">
     <label class="align-middle" for="todo" data-content="<%= goal.description %>"><%= goal.description %></label>
   </div>
   <% if goal.done? %>
