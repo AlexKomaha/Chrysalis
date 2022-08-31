@@ -7,9 +7,9 @@
           <figure class="text-center mb-0">
             <blockquote class="blockquote">
               <p class="pb-3">
-                <i class="fas fa-quote-left fa-xs text-success"></i>
+                <i class="fas fa-quote-left fa-xs"></i>
                 <span class="lead font-italic" data-quotes-target="quotes"><%= @quotes %></span>
-                <i class="fas fa-quote-right fa-xs text-success"></i>
+                <i class="fas fa-quote-right fa-xs"></i>
               </p>
             </blockquote>
             <figcaption class="blockquote-footer mb-0" data-quotes-target="author">
@@ -21,37 +21,45 @@
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row d-flex inline">
   <%# Journals %>
-  <div class="container col-2 pt-3">
-    <div class="card p-3 card-dash-journal">
-      <h4 class="text-left"><strong>Your journals</strong></h4>
-      <% if @journals.any? %>
-        <h6>Your journal today:</h6>
-      <% end %>
-      <% if @journals.empty? %>
-        <p>You dont have any journals yet</p>
-      <% else %>
-        <% @journals.each do |journal| %>
-          <%= link_to journal.title, journal_path(journal), class: "text-muted"%>
-        <% end %>
-      <% end %>
-      <%= link_to "Add a journal", new_journal_path, class: "btn btn-light" %>
+  <div class="container">
+    <div class="container">
+      <div class="container col-6 pt-3">
+        <div class="card p-3 card-dash">
+          <h4><strong>Your journal</strong></h4>
+          <% if @journals.any? %>
+            <h6>Here's your journal today:</h6>
+          <% end %>
+          <% if @journals.empty? %>
+            <p>You dont have any journals yet</p>
+            <%= link_to "Add journal", new_journal_path, class: "btn btn-light" %>
+          <% else %>
+            <% @journals.each do |journal| %>
+              <%= link_to journal.title, journal_path(journal), class: "text-muted"%>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
   <%# Streak %>
-  <div class="container col-2 pt-3">
-    <div class="card p-3 card-dash-journal">
-      <h4 class="text-left"><strong>Streak</strong></h4>
-      <%= image_tag "star (4).png", class: "streak-icon" %>
-      <p>You are on a <%= current_user.streak_count %> day streak.</p>
+  <div class="container">
+    <div class="container">
+      <div class="container col-6 pt-3">
+        <div class="card p-3 card-dash">
+          <h4 class="text-left"><strong>Your streak</strong></h4>
+          <%= image_tag "favorite.png", class: "streak-icon" %>
+          <p>You are on a <%= current_user.streak_count %> day streak.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div class="container">
   <div class="row gx-5">
     <%# Today's goals %>
-    <div class="col-4">
+    <div class="col-6">
       <div class="p-3 mt-3">
         <%= image_tag "target.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>Today's objectives</strong></h4>
@@ -62,7 +70,7 @@
       </div>
     </div>
     <%# Recent goals %>
-    <div class="col-4">
+    <div class="col-6">
       <div class="p-3 mt-3">
         <%= image_tag "success.png", class: "dash-icon" %>
         <h4 class="text-left"><strong>My recent goals</strong></h4>
@@ -74,23 +82,25 @@
     </div>
   </div>
   <%# Article %>
-  <div class="col-6">
-    <div class="p-3 pb-5 mb-5">
-      <%= image_tag "article.png", class: "dash-icon" %>
-      <h4 class="text-left"><strong>Latest article</strong></h4>
-      <%= link_to "View more", articles_path, class: "btn btn-light dash-button" %>
-      <div class="container">
-        <%= render "users/newest_article" %>
+  <div class="row gx-5">
+    <div class="col-6">
+      <div class="p-3 pb-5 mb-5">
+        <%= image_tag "article.png", class: "dash-icon" %>
+        <h4 class="text-left"><strong>Latest article</strong></h4>
+        <%= link_to "View more", articles_path, class: "btn btn-light dash-button" %>
+        <div class="container">
+          <%= render "users/newest_article" %>
+        </div>
       </div>
     </div>
-  </div>
-  <%# Calendar %>
-  <div class="col-6">
-    <div class="p-3 pb-5 mb-5 w-100">
-      <%= image_tag "calendar.png", class: "dash-icon" %>
-      <h4 class="text-left"><strong>This month</strong></h4>
-      <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
-      <%= render "users/emotions_dashboard", emotions: @emotions %>
+    <%# Calendar %>
+    <div class="col-6">
+      <div class="p-3 pb-5 mb-5 w-100">
+        <%= image_tag "calendar.png", class: "dash-icon" %>
+        <h4 class="text-left"><strong>This month</strong></h4>
+        <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
+        <%= render "users/emotions_dashboard", emotions: @emotions %>
+      </div>
     </div>
   </div>
 </div>

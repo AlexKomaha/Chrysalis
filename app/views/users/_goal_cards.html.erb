@@ -3,9 +3,11 @@
     <%# <% if @completed_goals.any? && @today_goals.empty? %>
     <div class="d-none" data-completed-goals-target="congrats">
       <div class="cookiesContent" id="cookiesPopup">
-        <div class="cookie-emoji">😄</div>
-        <p>Congratulations for achiving your goals!</p>
-        <%= link_to "Write a journal", new_journal_path, class: "btn btn-primary" %>
+        <div class="cookie-emoji">
+          <%= image_tag "well-done (1).png", class: "congrats-icon" %>
+        </div>
+        <p>Congratulations for achieving your goals!</p>
+        <%= link_to "Write a journal", new_journal_path, class: "btn btn-flat-devise" %>
       </div>
     </div>
     <div data-completed-goals-target="disappear">

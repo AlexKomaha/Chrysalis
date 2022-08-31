@@ -4,7 +4,8 @@
 }
 
 .card {
-  // background-color: none;
+  background-color: #FAFAFA;
+  border: none;
 }
 
 .card-product {
@@ -209,9 +210,12 @@
   }
 }
 
-// For journal card on dashboard
-.card-dash-journal {
+// For journal card/streak card on dashboard
+.card.card-dash {
   text-align: center;
+  height: 165px;
+  width: 330px;
+  border-radius: 15px;
 }
 
 a:link {
