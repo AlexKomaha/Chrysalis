@@ -1,0 +1,26 @@
+<div class="seven-wrapper">
+  <div class="table-container">
+    <div class="row">
+      <table>
+        <thead class="seven-header">
+          <tr>
+            <th>Date</th>
+            <th>Your Goal</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @recent_goals.each do |goal| %>
+            <tr>
+              <td><%= goal.created_at.strftime("%d %a") %></td>
+              <td><%= goal.description %></td>
+              <td>
+                <p class="status-pill text-center <%= goal.color %> "><%= goal.display_status %></p>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

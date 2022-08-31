@@ -13,10 +13,12 @@ $font-color: $black;
 // Colors
 $body-color: $gray;
 $primary:    $blue;
-$success:    $green;
-$info:       $yellow;
-$danger:     $red;
 $warning:    $orange;
+
+// Used for the goals table on the dashboard
+$success:    $vibrant-green;
+$info:       $vibrant-orange;
+$danger:     $vibrant-purple;
 
 // Buttons & inputs' radius
 $border-radius:    2px;
