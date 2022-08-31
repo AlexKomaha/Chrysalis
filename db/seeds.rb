@@ -17,6 +17,9 @@ puts "#{User.count} users created"
 # Creating seeds for emotions, journals and goals for users
 
 User.all.each do |user|
+  puts "Setting streak counts for users"
+  user.streak_count = 31
+  user.save
   puts "Getting emotions data"
   (1..60).each do |num|
     Emotion.create!(
