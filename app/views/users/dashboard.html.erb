@@ -21,14 +21,14 @@
   </div>
   <div class="container">
     <div class="row gx-5">
-      <div class="col-2">
-        <div class="card me-4 p-3 card-dash-journal">
+      <div class="col-3">
+        <div class="card p-3 card-dash-journal">
           <h4 class="text-left"><strong>Journals</strong></h4>
           <% if @journals.empty? %>
             <p>You dont have any journals yet</p>
           <% else %>
             <% @journals.each do |journal| %>
-              <%= link_to journal.title, journal_path(journal) %>
+              <%= link_to journal.title, journal_path(journal), class: "text-muted"%>
             <% end %>
           <% end %>
           <%= link_to "Add a journal", new_journal_path, class: "btn btn-light" %>
