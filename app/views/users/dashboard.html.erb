@@ -46,7 +46,7 @@
         <div class="p-3 pb-5 mb-5">
           <%= image_tag "article.png", class: "dash-icon" %>
           <h4 class="text-left"><strong>Latest article</strong></h4>
-          <%= link_to "View more", "#", class: "btn btn-light dash-button" %>
+          <%= link_to "View more", articles_path, class: "btn btn-light dash-button" %>
           <div class="container">
             <%= render "users/newest_article" %>
           </div>
