@@ -11,7 +11,9 @@
 .card-product {
   // overflow: hidden;
   height: 80px;
-  background: #F9F8FD;
+  // background: #F9F8FD;
+  background-color: $pastel-green;
+  color: black;
   border-radius: 25px;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
