@@ -1,14 +1,20 @@
+# Creating seeds for users
+
 puts "Destroying user database"
 User.destroy_all
 
 puts "User database cleaned"
 puts "Getting user data"
+
 User.create!(email: "koki@chrysalis.com", password: "123123", first_name: "Koki", last_name: "Takahashi")
 User.create!(email: "alison@chrysalis.com", password: "123123", first_name: "Alison", last_name: "Jeffrey")
 User.create!(email: "sae@chrysalis.com", password: "123123", first_name: "Sae", last_name: "Matsuda")
 User.create!(email: "alex@chrysalis.com", password: "123123", first_name: "Alex", last_name: "Komaha")
 User.create!(email: "toshiro@chrysalis.com", password: "123123", first_name: "Toshiro", last_name: "Tanaka")
+
 puts "#{User.count} users created"
+
+# Creating seeds for emotions, journals and goals for users
 
 User.all.each do |user|
   puts "Getting emotions data"
@@ -327,6 +333,8 @@ User.all.each do |user|
   puts "#{UserGoal.count} user goals created"
 end
 
+# Creating seeds for articles
+
 puts "Destroying article database"
 Article.destroy_all
 
@@ -350,3 +358,21 @@ Article.create!(title: "'I Hate Myself': 8 Ways to Combat Self-Hatred", url: "ht
 Article.create!(title: "What You Can Do to Cope With Anxiety", url: "https://www.verywellmind.com/manage-your-anxiety-2584184", image_url: "https://www.verywellmind.com/thmb/eLSvodLhLzyHiRTqAYnmcyD7s4w=/614x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/manage-your-anxiety-2584184-01-07daf91ba6de41d19f827cf65ceef07a.png", author: "Katharina Star, PhD")
 
 puts "#{Article.count} articles created"
+
+# Creating seeds for addresses of resource locations
+
+puts "Destroying resource locations database"
+Location.destroy_all
+
+puts "Resource location database cleaned"
+puts "Getting location data"
+
+Location.create!(name: "Tama Youth Support Station", address: "197-0023, 183-2 Shimo, Fussa, Tokyo", phone_number: "042-513-0577", url: "https://www.tamayss.jp/")
+Location.create!(name: "Tachikawa Wakasa Support Station", address: "190-0011, 2-9-22 Takamatsu, Tachikawa, Tokyo", phone_number: "042-529-3378", url: "https://public.sodateage.net/yss/tachikawa/")
+Location.create!(name: "Shinjuku Youth Support Station", address: "169-0051, 2-4-7 Nishiwaseda, Shinjuku, Tokyo", phone_number: "03-6380-2288", url: "https://syss.roukyou.gr.jp/")
+Location.create!(name: "Setagaya Youth Support Station", address: "154-0004, 4-3-1 Taishido, Setagaya, Tokyo", phone_number: "03-5779-8222", url: "https://www.setagaya-saposute.com/")
+Location.create!(name: "Nerima Youth Support Station", address: "179-0074, 4-16-9 Kasuga, Nerima, Tokyo", phone_number: "03-5848-8341", url: "https://kyodonet-nerima.net/")
+Location.create!(name: "JOBOTA", address: "143-0016, 1-11-1 Omorikita, Ota, Tokyo", phone_number: "03-6423-0251", url: "https://www.jobota.net/")
+Location.create!(name: "Shinjuku City", address: "160-0022,5-18-21 Shinjuku, Shinjuku, Tokyo", phone_number: "03-5273-3853", url: "http://www.city.shinjuku.lg.jp/fukushi/fukushi01_002056.html")
+
+puts "#{Location.count} resource locations created"
