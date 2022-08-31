@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @author = response[:author]
     @articles = Article.where(title: "What You Can Do to Cope With Anxiety")
     @header = true
+    @journals = policy_scope(Journal).last(1)
   end
 
   def fetch_quotes
