@@ -1,68 +1,68 @@
 <div class="container" data-controller="quotes">
-<div class="container h-100 mt-3">
-  <div class="row d-flex justify-content-center align-items-center h-100">
-    <div class="card" style="border-radius: 15px;">
-      <div class="card-body">
-        <figure class="text-center mb-0">
-          <blockquote class="blockquote">
-            <p class="pb-3">
-              <i class="fas fa-quote-left fa-xs text-success"></i>
-              <span class="lead font-italic" data-quotes-target="quotes"><%= @quotes %></span>
-              <i class="fas fa-quote-right fa-xs text-success"></i>
-            </p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0" data-quotes-target="author">
-            <%= @author %>
-          </figcaption>
-        </figure>
+  <div class="container h-100 mt-3">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="card" style="border-radius: 15px;">
+        <div class="card-body">
+          <figure class="text-center mb-0">
+            <blockquote class="blockquote">
+              <p class="pb-3">
+                <i class="fas fa-quote-left fa-xs text-success"></i>
+                <span class="lead font-italic" data-quotes-target="quotes"><%= @quotes %></span>
+                <i class="fas fa-quote-right fa-xs text-success"></i>
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0" data-quotes-target="author">
+              <%= @author %>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="row gx-5">
-    <div class="col-6">
-      <div class="p-3 mt-3">
-        <%= image_tag "target.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>Today's objectives</strong></h4>
-        <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button" %>
-        <div>
-          <%= render "users/goal_cards" %>
+  <div class="container">
+    <div class="row gx-5">
+      <div class="col-6">
+        <div class="p-3 mt-3">
+          <%= image_tag "target.png", class: "dash-icon" %>
+          <h4 class="text-left"><strong>Today's objectives</strong></h4>
+          <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button" %>
+          <div>
+            <%= render "users/goal_cards" %>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 mt-3">
-        <%= image_tag "success.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>My accomplished goals</strong></h4>
-        <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
-        <div class="container">
-          <%= render "users/goals_achieved" %>
-          <%#= render "users/last_seven" %>
+      <div class="col-6">
+        <div class="p-3 mt-3">
+          <%= image_tag "success.png", class: "dash-icon" %>
+          <h4 class="text-left"><strong>My accomplished goals</strong></h4>
+          <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
+          <div class="container">
+            <%= render "users/goals_achieved" %>
+            <%#= render "users/last_seven" %>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 pb-5 mb-5">
-        <%= image_tag "article.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>Latest article</strong></h4>
-        <%= link_to "View more", "#", class: "btn btn-light dash-button" %>
-        <div class="container">
-          <%= render "users/newest_article" %>
+      <div class="col-6">
+        <div class="p-3 pb-5 mb-5">
+          <%= image_tag "article.png", class: "dash-icon" %>
+          <h4 class="text-left"><strong>Latest article</strong></h4>
+          <%= link_to "View more", articles_path, class: "btn btn-light dash-button" %>
+          <div class="container">
+            <%= render "users/newest_article" %>
+          </div>
+          <%# Placeholder image %>
+          <%#= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
         </div>
-        <%# Placeholder image %>
-        <%#= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 pb-5 mb-5 w-100">
-        <%= image_tag "calendar.png", class: "dash-icon" %>
-        <h4 class="text-left"><strong>This month</strong></h4>
-        <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
-        <%= render "users/emotions_dashboard", emotions: @emotions %>
-        <%# Placeholder image %>
-        <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
+      <div class="col-6">
+        <div class="p-3 pb-5 mb-5 w-100">
+          <%= image_tag "calendar.png", class: "dash-icon" %>
+          <h4 class="text-left"><strong>This month</strong></h4>
+          <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
+          <%= render "users/emotions_dashboard", emotions: @emotions %>
+          <%# Placeholder image %>
+          <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
+        </div>
       </div>
     </div>
   </div>
-</div>
