@@ -2,8 +2,11 @@
   <div class='row gx-5'>
     <%# <% if @completed_goals.any? && @today_goals.empty? %>
     <div class="d-none" data-completed-goals-target="congrats">
-      <h6><%= "Congratulations for completing your goals!" %></h6>
-      <%= link_to "Write a journal", new_journal_path, class: "btn btn-primary" %>
+      <div class="cookiesContent" id="cookiesPopup">
+        <div class="cookie-emoji">😄</div>
+        <p>Congratulations for achiving your goals!</p>
+        <%= link_to "Write a journal", new_journal_path, class: "btn btn-primary" %>
+      </div>
     </div>
     <div data-completed-goals-target="disappear">
       <% if @today_goals.any? %>
