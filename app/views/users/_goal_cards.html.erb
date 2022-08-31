@@ -1,12 +1,18 @@
-<div class='container'>
+<div class='container' data-controller="completed-goals">
   <div class='row gx-5'>
+    <%# <% if @completed_goals.any? && @today_goals.empty? %>
+    <div class="d-none" data-completed-goals-target="congrats">
+      <h6><%= "Congratulations for completing your goals!" %></h6>
+      <%= link_to "Write a journal", new_journal_path, class: "btn btn-primary" %>
+    </div>
     <% if @today_goals.any? %>
       <% @today_goals.first(4).each do |goal| %>
         <div class="col-sm-12">
           <div class="container">
-            <div class="card-product my-4 mx-3">
-              <div class="card-product-infos">
-                <%= render "users/checkbox", goal: goal %></div>
+            <div class="card-product my-4 mx-3" data-completed-goals-target="disappear">
+              <div class="card-product-infos" data-action="change->completed-goals#sayCongrats">
+                <%= render "users/checkbox", goal: goal %>
+              </div>
             </div>
           </div>
         </div>
