@@ -37,7 +37,6 @@
           <h4 class="text-left"><strong>My recent goals</strong></h4>
           <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button" %>
           <div class="container">
-            <%#= render "users/goals_achieved" %>
             <%= render "users/recent" %>
           </div>
         </div>
@@ -50,8 +49,6 @@
           <div class="container">
             <%= render "users/newest_article" %>
           </div>
-          <%# Placeholder image %>
-          <%#= image_tag "placeholder-article.jpg", class: "placeholder-img-2" %>
         </div>
       </div>
       <div class="col-6">
@@ -60,8 +57,8 @@
           <h4 class="text-left"><strong>This month</strong></h4>
           <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
           <%= render "users/emotions_dashboard", emotions: @emotions %>
-          <%# Placeholder image %>
-          <%#= image_tag "placeholder-calendar.png", class: "placeholder-img" %>
         </div>
       </div>
     </div>
+  </div>
+</div>

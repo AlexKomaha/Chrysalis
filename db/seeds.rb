@@ -117,7 +117,8 @@ User.all.each do |user|
       description: "Take a shower or a bath",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   5.times do
@@ -125,7 +126,8 @@ User.all.each do |user|
       description: "Take a shower or a bath",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   24.times do
@@ -133,7 +135,8 @@ User.all.each do |user|
       description: "Make my bed",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   30.times do
@@ -141,7 +144,8 @@ User.all.each do |user|
       description: "Make my bed",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   24.times do
@@ -149,7 +153,8 @@ User.all.each do |user|
       description: "Make myself lunch",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   8.times do
@@ -157,7 +162,8 @@ User.all.each do |user|
       description: "Make myself lunch",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   18.times do
@@ -165,7 +171,8 @@ User.all.each do |user|
       description: "Talk to a family member or friend",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   8.times do
@@ -173,7 +180,8 @@ User.all.each do |user|
       description: "Talk to a family member or friend",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   46.times do
@@ -181,7 +189,8 @@ User.all.each do |user|
       description: "Brush my teeth",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   10.times do
@@ -189,7 +198,8 @@ User.all.each do |user|
       description: "Brush my teeth",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   20.times do
@@ -197,7 +207,8 @@ User.all.each do |user|
       description: "Wash the dishes",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   13.times do
@@ -205,7 +216,8 @@ User.all.each do |user|
       description: "Wash the dishes",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   5.times do
@@ -213,7 +225,8 @@ User.all.each do |user|
       description: "Take a short walk",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   6.times do
@@ -221,7 +234,8 @@ User.all.each do |user|
       description: "Take a short walk",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   3.times do
@@ -229,7 +243,8 @@ User.all.each do |user|
       description: "Clean my room",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   1.times do
@@ -237,7 +252,8 @@ User.all.each do |user|
       description: "Clean my room",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   5.times do
@@ -245,7 +261,8 @@ User.all.each do |user|
       description: "Change clothes",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   2.times do
@@ -253,7 +270,8 @@ User.all.each do |user|
       description: "Change clothes",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   1.times do
@@ -261,7 +279,8 @@ User.all.each do |user|
       description: "Call my grandma",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   4.times do
@@ -269,7 +288,8 @@ User.all.each do |user|
       description: "Watch TV with my mother",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   3.times do
@@ -277,7 +297,8 @@ User.all.each do |user|
       description: "Watch TV with my mother",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   5.times do
@@ -285,7 +306,8 @@ User.all.each do |user|
       description: "Take the dog for a walk",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   2.times do
@@ -293,7 +315,8 @@ User.all.each do |user|
       description: "Take the dog for a walk",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
   end
 
   1.times do
@@ -301,7 +324,8 @@ User.all.each do |user|
       description: "Organise my manga collection",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
   end
 
   2.times do
@@ -309,7 +333,8 @@ User.all.each do |user|
       description: "Make an appointment with my doctor",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
   end
 
   3.times do
@@ -317,7 +342,8 @@ User.all.each do |user|
       description: "Go to doctor's appointment",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
   end
 
   1.times do
@@ -325,7 +351,8 @@ User.all.each do |user|
       description: "Go to the drugstore and buy toilet paper",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
   end
 
   1.times do
@@ -333,7 +360,8 @@ User.all.each do |user|
       description: "Call my friend and see if he wants to come over",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
   end
 
   3.times do
@@ -341,7 +369,8 @@ User.all.each do |user|
       description: "Take out the trash",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30)))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
   end
 
   2.times do
@@ -349,7 +378,7 @@ User.all.each do |user|
       description: "Take out the trash",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
     )
   end
 
@@ -358,7 +387,7 @@ User.all.each do |user|
       description: "Do my laundry",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
     )
   end
 
@@ -367,7 +396,7 @@ User.all.each do |user|
       description: "Go to the support centre",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
     )
   end
 
@@ -376,7 +405,7 @@ User.all.each do |user|
       description: "Go to the convenience store",
       user: user,
       status: "done",
-      created_at: Date.new(2022, rand(7..9), rand(1..30))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
     )
   end
 
@@ -385,7 +414,7 @@ User.all.each do |user|
       description: "Go to the convenience store",
       user: user,
       status: "inactive",
-      created_at: Date.new(2022, rand(7..9), rand(1..30))
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
     )
   end
 
