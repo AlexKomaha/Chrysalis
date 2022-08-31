@@ -1,3 +1,4 @@
+<%# Quote %>
 <div class="container" data-controller="quotes">
   <div class="container h-100 mt-3">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -19,61 +20,77 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row gx-5">
-      <div class="col-3">
-        <div class="card p-3 card-dash-journal">
-          <h4 class="text-left"><strong>Journals</strong></h4>
-          <% if @journals.empty? %>
-            <p>You dont have any journals yet</p>
-          <% else %>
-            <% @journals.each do |journal| %>
-              <%= link_to journal.title, journal_path(journal), class: "text-muted"%>
-            <% end %>
-          <% end %>
-          <%= link_to "Add a journal", new_journal_path, class: "btn btn-light" %>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="p-3 mt-3">
-          <%= image_tag "target.png", class: "dash-icon" %>
-          <h4 class="text-left"><strong>Today's objectives</strong></h4>
-          <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button dash-button-goal" %>
-          <div>
-            <%= render "users/goal_cards" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="p-3 mt-3">
-          <%= image_tag "success.png", class: "dash-icon" %>
-          <h4 class="text-left"><strong>My recent goals</strong></h4>
-            <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button dash-button-view" %>
-          </div>
-          <div class="container">
-            <%= render "users/recent" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="p-3 pb-5 mb-5">
-          <%= image_tag "article.png", class: "dash-icon" %>
-          <h4 class="text-left"><strong>Latest article</strong></h4>
-          <%= link_to "View more", articles_path, class: "btn btn-light dash-button" %>
-          <div class="container">
-            <%= render "users/newest_article" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="p-3 pb-5 mb-5 w-100">
-          <%= image_tag "calendar.png", class: "dash-icon" %>
-          <h4 class="text-left"><strong>This month</strong></h4>
-          <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
-          <%= render "users/emotions_dashboard", emotions: @emotions %>
-        </div>
-      </div>
+</div>
+<div class="row">
+  <%# Journals %>
+  <div class="container col-2 pt-3">
+    <div class="card p-3 card-dash-journal">
+      <h4 class="text-left"><strong>Your journals</strong></h4>
+      <% if @journals.any? %>
+        <h6>Your journal today:</h6>
+      <% end %>
+      <% if @journals.empty? %>
+        <p>You dont have any journals yet</p>
+      <% else %>
+        <% @journals.each do |journal| %>
+          <%= link_to journal.title, journal_path(journal), class: "text-muted"%>
+        <% end %>
+      <% end %>
+      <%= link_to "Add a journal", new_journal_path, class: "btn btn-light" %>
+    </div>
+  </div>
+  <%# Streak %>
+  <div class="container col-2 pt-3">
+    <div class="card p-3 card-dash-journal">
+      <h4 class="text-left"><strong>Streak</strong></h4>
+      <%= image_tag "star (4).png", class: "streak-icon" %>
+      <p>You are on a <%= current_user.streak_count %> day streak.</p>
     </div>
   </div>
 </div>
-
+<div class="container">
+  <div class="row gx-5">
+    <%# Today's goals %>
+    <div class="col-4">
+      <div class="p-3 mt-3">
+        <%= image_tag "target.png", class: "dash-icon" %>
+        <h4 class="text-left"><strong>Today's objectives</strong></h4>
+        <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-light dash-button dash-button-goal" %>
+        <div>
+          <%= render "users/goal_cards" %>
+        </div>
+      </div>
+    </div>
+    <%# Recent goals %>
+    <div class="col-4">
+      <div class="p-3 mt-3">
+        <%= image_tag "success.png", class: "dash-icon" %>
+        <h4 class="text-left"><strong>My recent goals</strong></h4>
+        <%= link_to "View more", user_goals_path, class: "btn btn-light dash-button dash-button-view" %>
+      </div>
+      <div class="container">
+        <%= render "users/recent" %>
+      </div>
+    </div>
+  </div>
+  <%# Article %>
+  <div class="col-6">
+    <div class="p-3 pb-5 mb-5">
+      <%= image_tag "article.png", class: "dash-icon" %>
+      <h4 class="text-left"><strong>Latest article</strong></h4>
+      <%= link_to "View more", articles_path, class: "btn btn-light dash-button" %>
+      <div class="container">
+        <%= render "users/newest_article" %>
+      </div>
+    </div>
+  </div>
+  <%# Calendar %>
+  <div class="col-6">
+    <div class="p-3 pb-5 mb-5 w-100">
+      <%= image_tag "calendar.png", class: "dash-icon" %>
+      <h4 class="text-left"><strong>This month</strong></h4>
+      <%= link_to "View more", emotions_path, class: "btn btn-light dash-button" %>
+      <%= render "users/emotions_dashboard", emotions: @emotions %>
+    </div>
+  </div>
+</div>
