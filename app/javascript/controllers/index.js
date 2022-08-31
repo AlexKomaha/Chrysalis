@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import CompletedGoalsController from "./completed_goals_controller"
+application.register("completed-goals", CompletedGoalsController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
