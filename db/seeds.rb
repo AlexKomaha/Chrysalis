@@ -367,12 +367,12 @@ Location.destroy_all
 puts "Resource location database cleaned"
 puts "Getting location data"
 
-Location.create!(name: "Tama Youth Support Station", address: "197-0023, 183-2 Shimo, Fussa, Tokyo", phone_number: "042-513-0577", url: "https://www.tamayss.jp/")
-Location.create!(name: "Tachikawa Wakasa Support Station", address: "190-0011, 2-9-22 Takamatsu, Tachikawa, Tokyo", phone_number: "042-529-3378", url: "https://public.sodateage.net/yss/tachikawa/")
-Location.create!(name: "Shinjuku Youth Support Station", address: "169-0051, 2-4-7 Nishiwaseda, Shinjuku, Tokyo", phone_number: "03-6380-2288", url: "https://syss.roukyou.gr.jp/")
-Location.create!(name: "Setagaya Youth Support Station", address: "154-0004, 4-3-1 Taishido, Setagaya, Tokyo", phone_number: "03-5779-8222", url: "https://www.setagaya-saposute.com/")
-Location.create!(name: "Nerima Youth Support Station", address: "179-0074, 4-16-9 Kasuga, Nerima, Tokyo", phone_number: "03-5848-8341", url: "https://kyodonet-nerima.net/")
-Location.create!(name: "JOBOTA", address: "143-0016, 1-11-1 Omorikita, Ota, Tokyo", phone_number: "03-6423-0251", url: "https://www.jobota.net/")
-Location.create!(name: "Shinjuku City", address: "160-0022,5-18-21 Shinjuku, Shinjuku, Tokyo", phone_number: "03-5273-3853", url: "http://www.city.shinjuku.lg.jp/fukushi/fukushi01_002056.html")
+Location.create!(name: "Tama Youth Support Station", address: "183-2 Shimo, Fussa, Tokyo", phone_number: "042-513-0577", url: "https://www.tamayss.jp/")
+Location.create!(name: "Tachikawa Wakasa Support Station", address: "2-9-22 Takamatsu, Tachikawa, Tokyo", phone_number: "042-529-3378", url: "https://public.sodateage.net/yss/tachikawa/")
+Location.create!(name: "Shinjuku Youth Support Station", address: "2-4-7 Nishiwaseda, Shinjuku, Tokyo", phone_number: "03-6380-2288", url: "https://syss.roukyou.gr.jp/")
+Location.create!(name: "Setagaya Youth Support Station", address: "4-3-1 Taishido, Setagaya, Tokyo", phone_number: "03-5779-8222", url: "https://www.setagaya-saposute.com/")
+Location.create!(name: "Nerima Youth Support Station", address: "4-16-9 Kasuga, Nerima, Tokyo", phone_number: "03-5848-8341", url: "https://kyodonet-nerima.net/")
+Location.create!(name: "JOBOTA", address: "1-11-1 Omorikita, Ota, Tokyo", phone_number: "03-6423-0251", url: "https://www.jobota.net/")
+Location.create!(name: "Shinjuku City", address: "5-18-21 Shinjuku, Shinjuku, Tokyo", phone_number: "03-5273-3853", url: "http://www.city.shinjuku.lg.jp/fukushi/fukushi01_002056.html")
 
 puts "#{Location.count} resource locations created"
