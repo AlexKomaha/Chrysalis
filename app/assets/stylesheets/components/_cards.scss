@@ -126,9 +126,9 @@
   border-radius: 10px;
   margin: 20px;
   height: 430px;
-  position: relative;
-  top: -15px;
-  left: -50px;
+  // position: relative;
+  // top: -15px;
+  // left: -50px;
   &:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
@@ -213,11 +213,18 @@
 // For journal card/streak card on dashboard
 .card.card-dash {
   text-align: center;
-  height: 165px;
-  width: 330px;
+  height: 120px;
+  width: 636px;
   border-radius: 15px;
 }
 
 a:link {
   text-decoration: none;
- }
+}
+
+// For goals
+.card.card-dash-goals {
+  height: 700px;
+  width: 636px;
+  border-radius: 15px;
+}

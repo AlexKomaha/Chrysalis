@@ -6,7 +6,7 @@
         <div class="cookie-emoji">
           <%= image_tag "well-done (1).png", class: "congrats-icon" %>
         </div>
-        <p>Congratulations for achieving your goals!</p>
+        <p>Great job for achieving your goals!</p>
         <%= link_to "Write a journal", new_journal_path, class: "btn btn-flat-devise" %>
       </div>
     </div>
@@ -24,7 +24,9 @@
           </div>
         <% end %>
       <% else %>
-        <h6><%= "No goals added yet! Make sure to add a goal today!" if @today_goals.empty? %></h6>
+        <div class="text-center">
+          <h6><%= "No goals added yet! Make sure to add a goal today!" if @today_goals.empty? %></h6>
+        </div>
       <% end %>
     </div>
   </div>
