@@ -12,7 +12,7 @@ puts "#{User.count} users created"
 
 User.all.each do |user|
   puts "Getting emotions data"
-  (1..40).each do |num|
+  (1..60).each do |num|
     Emotion.create!(
       emotion_level: rand(1..7),
       user: user,
@@ -52,7 +52,7 @@ User.all.each do |user|
 
   puts "Getting goal data"
 
-  30.times do
+  55.times do
     UserGoal.create!(
       description: "Take a shower or a bath",
       user: user,
@@ -76,15 +76,15 @@ User.all.each do |user|
     )
   end
 
-  15.times do
+  30.times do
     UserGoal.create!(
-      description: "Take a shower or a bath",
+      description: "Make my bed",
       user: user,
       status: "inactive"
     )
   end
 
-  15.times do
+  24.times do
     UserGoal.create!(
       description: "Make myself lunch",
       user: user,
@@ -124,7 +124,7 @@ User.all.each do |user|
     )
   end
 
-  8.times do
+  10.times do
     UserGoal.create!(
       description: "Brush my teeth",
       user: user,
@@ -212,11 +212,27 @@ User.all.each do |user|
     )
   end
 
-  2.times do
+  3.times do
+    UserGoal.create!(
+      description: "Watch TV with my mother",
+      user: user,
+      status: "inactive"
+    )
+  end
+
+  5.times do
     UserGoal.create!(
       description: "Take the dog for a walk",
       user: user,
       status: "inactive"
+    )
+  end
+
+  2.times do
+    UserGoal.create!(
+      description: "Take the dog for a walk",
+      user: user,
+      status: "done"
     )
   end
 
@@ -236,7 +252,7 @@ User.all.each do |user|
     )
   end
 
-  2.times do
+  3.times do
     UserGoal.create!(
       description: "Go to doctor's appointment",
       user: user,
@@ -268,11 +284,43 @@ User.all.each do |user|
     )
   end
 
+  2.times do
+    UserGoal.create!(
+      description: "Take out the trash",
+      user: user,
+      status: "inactive"
+    )
+  end
+
   5.times do
     UserGoal.create!(
       description: "Do my laundry",
       user: user,
       status: "done"
+    )
+  end
+
+  5.times do
+    UserGoal.create!(
+      description: "Go to the support centre",
+      user: user,
+      status: "done"
+    )
+  end
+
+  4.times do
+    UserGoal.create!(
+      description: "Go to the convenience store",
+      user: user,
+      status: "done"
+    )
+  end
+
+  4.times do
+    UserGoal.create!(
+      description: "Go to the convenience store",
+      user: user,
+      status: "inactive"
     )
   end
 

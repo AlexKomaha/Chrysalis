@@ -1,5 +1,5 @@
-<div class="container progress-card mt-5">
-  <div class="container mb-5 col-8">
+<div class="container progress-card">
+  <div class="container my-5 col-8">
     <div class="container">
       <%= image_tag "check-mark.png", class: "progress-icon" %>
       <h1><strong>My progress</strong></h1>
@@ -8,7 +8,7 @@
         <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat-save" %>
       </div>
       <%# Iterating over a hash. The keys are all unique descriptions and the values are the user_goals for that description %>
-      <% @user_goals.each_with_index do |(description, user_goals), index| %>
+      <% @user_goals.sort{|a,b| a <=> b}.each_with_index do |(description, user_goals), index| %>
         <%# if user_goal.status == "done" %>
         <div class="description">
           <%= description %>
