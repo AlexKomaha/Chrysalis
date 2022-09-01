@@ -1,7 +1,10 @@
-<div class='container py-5 col-8'>
+<div class='container pt-5 col-8'>
   <%= image_tag "journal.png", class: "journal-icon" %>
   <h2><%= @journal.title %></h2>
   <hr>
+</div>
+<div class="emotion-score-wrapper pb-5">
+  <h5 class="emotion-score">On this day you said you were: <span style="font-weight: bold;"><%= @score %>/100</span><%= image_tag "confused.png", alt: "text" %></h5>
 </div>
 <div class='container mb-5 pb-5'>
   <div class='container d-flex justify-content-center'>
