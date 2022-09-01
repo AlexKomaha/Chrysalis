@@ -94,3 +94,6 @@ gem "http"
 
 # Add geocode
 gem "geocoder"
+
+# Add textmood
+gem 'textmood'
