@@ -13,8 +13,8 @@
     <div data-completed-goals-target="disappear">
       <% if @today_goals.any? %>
         <% @today_goals.first(4).each do |goal| %>
-          <div class="col-sm-12">
-            <div class="container">
+          <div class="col-sm-12 mt-5">
+            <div class="container mt-3">
               <div class="card-product my-4 mx-3">
                 <div class="card-product-infos" data-action="change->completed-goals#sayCongrats">
                   <%= render "users/checkbox", goal: goal %>
@@ -24,7 +24,7 @@
           </div>
         <% end %>
       <% else %>
-        <div class="text-center">
+        <div class="text-center mt-5">
           <h6><%= "No goals added yet! Make sure to add a goal today!" if @today_goals.empty? %></h6>
         </div>
       <% end %>
