@@ -4,13 +4,16 @@
 }
 
 .card {
-  // background-color: none;
+  background-color: #FAFAFA;
+  border: none;
 }
 
 .card-product {
   // overflow: hidden;
   height: 80px;
-  background: #F9F8FD;
+  // background: #F9F8FD;
+  background-color: $pastel-green;
+  color: black;
   border-radius: 25px;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -121,13 +124,13 @@
 .card-trip-article {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
   border-radius: 10px;
   margin: 20px;
   height: 430px;
-  position: relative;
-  top: -15px;
-  left: -50px;
+  // position: relative;
+  // top: -15px;
+  // left: -50px;
   &:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
@@ -209,11 +212,21 @@
   }
 }
 
-.card-dash-journal {
-text-align: center;
-
+// For journal card/streak card on dashboard
+.card.card-dash {
+  text-align: center;
+  height: 120px;
+  width: 636px;
+  border-radius: 15px;
 }
 
 a:link {
   text-decoration: none;
- }
+}
+
+// For goals
+.card.card-dash-goals {
+  height: 700px;
+  width: 636px;
+  border-radius: 15px;
+}

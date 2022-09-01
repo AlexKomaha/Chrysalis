@@ -2,14 +2,14 @@
   <div class="table-container">
     <div class="row">
       <table>
-        <thead class="seven-header">
+        <thead class="seven-header text-center">
           <tr>
             <th>Date</th>
             <th>Your Goal</th>
             <th>Status</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
           <% @recent_goals.each do |goal| %>
             <tr>
               <td><%= goal.created_at.strftime("%d %a") %></td>

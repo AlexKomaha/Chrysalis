@@ -84,14 +84,36 @@
   }
 }
 
+
+.btn-flat-dash {
+  color: white;
+  border: none;
+  padding: 3px 24px;
+  border-radius: 4px;
+  background: $pop-green;
+  position: relative;
+  top: -38px;
+  left: 470px;
+  font-weight: 500;
+  font-size: 16px;
+  width: 128px;
+  height: 32px;
+  font-weight: 500;
+  &:hover {
+    background-color: $pop-green;
+    box-shadow: 0 0 3px rgba(24, 81, 35, 0.763);
+    color: white;
+  }
+}
+
 .dash-button-goal {
-left: 225px !important;
+  // left: 225px !important;
 }
 
 .dash-button-view {
-left: 380px !important;
+  // left: 380px !important;
 }
 
 .btn-light {
-  color: #000000;
+  // color: #000000;
 }

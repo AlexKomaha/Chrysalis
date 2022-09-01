@@ -1,11 +1,13 @@
 <div class='container' data-controller="completed-goals">
   <div class='row gx-5'>
     <%# <% if @completed_goals.any? && @today_goals.empty? %>
-    <div class="d-none" data-completed-goals-target="congrats">
+    <div class="d-none d-flex justify-content-center mt-4 pt-4" data-completed-goals-target="congrats">
       <div class="cookiesContent" id="cookiesPopup">
-        <div class="cookie-emoji">😄</div>
-        <p>Congratulations for achiving your goals!</p>
-        <%= link_to "Write a journal", new_journal_path, class: "btn btn-primary" %>
+        <div class="cookie-emoji">
+          <%= image_tag "well-done (1).png", class: "congrats-icon" %>
+        </div>
+        <p>Great job for achieving your goals!</p>
+        <%= link_to "Write a journal", new_journal_path, class: "btn btn-flat-devise" %>
       </div>
     </div>
     <div data-completed-goals-target="disappear">
@@ -22,7 +24,9 @@
           </div>
         <% end %>
       <% else %>
-        <h6><%= "No goals added yet! Make sure to add a goal today!" if @today_goals.empty? %></h6>
+        <div class="text-center">
+          <h6><%= "No goals added yet! Make sure to add a goal today!" if @today_goals.empty? %></h6>
+        </div>
       <% end %>
     </div>
   </div>
