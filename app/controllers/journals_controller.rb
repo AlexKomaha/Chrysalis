@@ -15,8 +15,13 @@ class JournalsController < ApplicationController
     @journal = Journal.find(params[:id])
     authorize @journal
     @emotion_of_day = Emotion.where(created_at: @journal.created_at.beginning_of_day..@journal.created_at.end_of_day).first
-    tm = TextMood.new(language: "en")
+    tm = TextMood.new(language: "en", normalize_score: true)
     @score = tm.analyze(@journal.content || @journal.rich_content.to_plain_text)
+    if @score.negative?
+      @score = 30
+    else
+      @score += 30
+    end
   end
 
   def new
