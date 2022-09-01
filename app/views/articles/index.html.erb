@@ -35,5 +35,15 @@
     </div>
     <%= render "pages/map" %>
     <%# Iterate over the resources in the db and write an unordered list with the details %>
+    <ul>
+      <% @locations.each do |location| %>
+        <li>
+          <%= location.name %>
+          <%= location.address %>
+          <%= location.phone_number %>
+          <%= link_to "Website", location.url %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
