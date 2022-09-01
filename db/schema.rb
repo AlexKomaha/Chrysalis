@@ -111,7 +111,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_044902) do
     t.integer "sign_in_count", default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.datetime "previous_sign_in_at", default: "2022-08-31 16:54:12"
+    t.datetime "previous_sign_in_at", default: "2022-08-31 17:11:14"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.integer "streak_count", default: 0
