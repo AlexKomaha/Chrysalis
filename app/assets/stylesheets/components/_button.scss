@@ -117,3 +117,20 @@
 .btn-light {
   // color: #000000;
 }
+
+// For adding on the dashboard
+.btn-flat-save-dash {
+  color: white;
+  border: none;
+  padding: 3px 24px;
+  border-radius: 30px;
+  background: $pop-green;
+  width: 160px;
+  font-weight: 500;
+  font-size: 16px;
+  &:hover {
+    background-color: $pop-green;
+    box-shadow: 0 0 3px rgba(24, 81, 35, 0.763);
+    color: white;
+  }
+}

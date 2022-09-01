@@ -24,15 +24,17 @@
 <div class="row">
   <%# Journals %>
   <div class="container d-flex justify-content-center">
-    <div class="container d-flex justify-content-end col-6 pt-3">
+    <div class="container d-flex justify-content-end col-3 pt-3" style="margin-right: 0;padding-left: 0;">
       <div class="card p-3 card-dash">
         <h4><strong>Your journal</strong></h4>
         <% if @journals.any? %>
           <h6>Here's your journal from today:</h6>
         <% end %>
         <% if @journals.empty? %>
-          <p>You dont have any journals yet! Make sure to add one.</p>
-          <%= link_to "Add journal", new_journal_path, class: "btn btn-flat-save" %>
+          <p>You dont have a journal for today!</p>
+          <div>
+            <%= link_to "Add journal", new_journal_path, class: "btn btn-flat-save-dash" %>
+          </div>
         <% else %>
           <% @journals.each do |journal| %>
             <%= link_to journal.title, journal_path(journal), class: "text-muted"%>
@@ -41,13 +43,32 @@
       </div>
     </div>
     <%# Streak %>
-    <div class="container col-6 pt-3">
+    <div class="container d-flex justify-content-center col-3 pt-3" style="margin-right: 0; margin-left: 0;">
       <div class="card p-3 card-dash">
         <h4><strong>Your streak</strong></h4>
         <div class="d-flex justify-content-center">
           <%= image_tag "favorite.png", class: "streak-icon" %>
         </div>
         <p>You are on a <strong><%= current_user.streak_count %></strong> day streak</p>
+      </div>
+    </div>
+    <%# Emotions %>
+    <div class="container d-flex justify-content-center col-3 pt-3" style="margin-left: 0;padding-right: 0;">
+      <div class="card p-3 card-dash">
+        <h4><strong>Your emotion</strong></h4>
+        <% if @emotion.any? %>
+          <h6>Here's your emotion from today:</h6>
+        <% end %>
+        <% if @emotion.empty? %>
+          <p>You haven't added an emotion yet!</p>
+          <div>
+            <%= link_to "Add emotion", emotions_path, class: "btn btn-flat-save-dash" %>
+          </div>
+        <% else %>
+          <% @emotion.each do |emotion| %>
+            <%= link_to "Your day on the calendar", emotions_path, class: "text-muted"%>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

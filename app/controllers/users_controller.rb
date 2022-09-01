@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @recent_goals = UserGoal.where(user: current_user).order(created_at: :desc).first(5)
     @colors = ["blue", "green", "purple", "orange"]
     @emotions = current_user.emotions
+    @emotion = current_user.emotions.where(created_at: Date.today.all_day)
     response = fetch_quotes
     @quotes = response[:quote]
     @author = response[:author]
