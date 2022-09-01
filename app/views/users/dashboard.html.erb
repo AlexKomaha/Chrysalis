@@ -37,7 +37,7 @@
           </div>
         <% else %>
           <% @journals.each do |journal| %>
-            <%= link_to journal.title, journal_path(journal), class: "text-muted"%>
+            <p class="mt-2"><%= link_to journal.title, journal_path(journal), class: "text-muted"%></p>
           <% end %>
         <% end %>
       </div>
