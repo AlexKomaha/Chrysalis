@@ -31,7 +31,7 @@
           <h6>Here's your journal from today:</h6>
         <% end %>
         <% if @journals.empty? %>
-          <p>You dont have a journal for today!</p>
+          <p>You haven't written a journal yet!</p>
           <div>
             <%= link_to "Add journal", new_journal_path, class: "btn btn-flat-save-dash" %>
           </div>
