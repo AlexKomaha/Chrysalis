@@ -42,6 +42,19 @@ class JournalsController < ApplicationController
     end
   end
 
+  def edit
+    @journal = Journal.find(params[:id])
+    authorize @journal
+  end
+
+  def update
+    @journal = Journal.new(journal_params)
+    @journal = Journal.find(params[:id])
+    authorize @journal
+    @journal.update(journal_params)
+    redirect_to journals_path
+  end
+
   # To format the date with st, rd, nd, th. E.g. 21st
   # def format(time)
   #   time.strftime("%A %-d, %l:%M%P").sub!(/\d?\d/) do |day|
