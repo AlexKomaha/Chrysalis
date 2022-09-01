@@ -17,7 +17,8 @@ class UsersController < ApplicationController
     @author = response[:author]
     @articles = Article.where(title: "When Mental Illness Won't Let Us Leave The House")
     @header = true
-    @journals = policy_scope(Journal).last(1)
+    @journals = policy_scope(Journal)
+    @journals = current_user.journals.where(created_at: Date.today.all_day)
   end
 
   def fetch_quotes
