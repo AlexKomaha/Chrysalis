@@ -31,7 +31,7 @@
           <h6>Here's your journal from today:</h6>
         <% end %>
         <% if @journals.empty? %>
-          <p>You dont have any journals yet! Make sure to add one.</p>
+          <p>You dont have a journal for today!</p>
           <div>
             <%= link_to "Add journal", new_journal_path, class: "btn btn-flat-save-dash" %>
           </div>
@@ -60,7 +60,7 @@
           <h6>Here's your emotion from today:</h6>
         <% end %>
         <% if @emotion.empty? %>
-          <p>You haven't added an emotion yet! Make sure to add one.</p>
+          <p>You haven't added an emotion yet!</p>
           <div>
             <%= link_to "Add emotion", emotions_path, class: "btn btn-flat-save-dash" %>
           </div>
