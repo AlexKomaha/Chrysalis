@@ -3,7 +3,7 @@
   <h2><%= @journal.title %></h2>
   <hr>
 </div>
-<div class="emotion-score-wrapper pb-5">
+<div class="emotion-score-wrapper py-5">
   <h5 class="emotion-score">On this day you said you were: <span style="font-weight: bold;"><%= @score %>/100</span>
     <% if @score < 50 %>
       <%= image_tag "sad (1).png", alt: "text" %>
@@ -28,7 +28,8 @@
       </p>
     </div>
   </div>
-  <div class="container text-center py-4">
-    <%= link_to "Back", journals_path, class: "btn btn-light" %>
+  <div class="container text-center py-4 inline-block d-flex justify-content-center">
+    <%= link_to "Back", journals_path, class: "btn btn-light mx-4" %>
+    <%= link_to "Edit", edit_journal_path(@journal), class: "btn btn-flat-save" %>
   </div>
 </div>

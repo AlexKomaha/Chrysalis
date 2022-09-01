@@ -1,0 +1,16 @@
+<div class="container col-7">
+  <div class="add-journal-wrapper">
+    <h2 class="mb-3">How was your day today?</h2>
+    <h6 class="mb-5">Try and reflect on how your day went. What went well? What could you do have done to make the day better? Did you achieve your goals today? If not, what stopped you?</h6>
+    <%= simple_form_for @journal do |f| %>
+      <%= f.input :title %>
+      <div class="form-inputs">
+        <%= f.rich_text_area :rich_content %>
+      </div>
+      <div class="d-flex justify-content-center mt-5 pb-5">
+        <%= link_to "Back", journals_path, class: "btn btn-light m-3 px-4" %>
+        <%= f.submit 'Save', class: 'btn btn-flat-save m-3 px-4' %>
+      </div>
+    <% end %>
+  </div>
+</div>
