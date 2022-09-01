@@ -36,9 +36,11 @@
                   <span class="d-inline-block text-truncate" style="max-width: 600px;">
                     <%= link_to journal.title, journal_path(journal), class: "journal-link" %>
                   </span>
-                  <%= journal.created_at.strftime('%A %d %I:%M%p') %>
+                  <%= journal.created_at.strftime('%A %d %H:%M%p') %>
                 </div>
               <% end %>
+            <% else %>
+              <h5 class="mt-5 pt-5 text-center">You didn't add any journals for this month!</h5>
             </div>
           <% end %>
         </div>
