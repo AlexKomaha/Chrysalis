@@ -41,10 +41,14 @@
         <div class="modal-body">
           <div class="position-relative" >
             <div class ="d-flex justify-content-between">
-              <img src="https://www.mychrysalis.me/assets/sad%20(1)-ed0008707da5bf14bcfa1f34159c5cfc2e981d17f2ba88dc8420b351e9159626.png" alt="" width = 45px>
-              <p>It's not a good day</p>
-              <p>I feel positive</p>
-              <img src="https://www.mychrysalis.me/assets/smile-495bed1bbba9650b6ff0c425b9d52538d7d6df3434602bc486016cb2fe6ae001.png" alt="" width = 45px>
+              <div class="d-flex align-items-center">
+                <img src="https://www.mychrysalis.me/assets/sad%20(1)-ed0008707da5bf14bcfa1f34159c5cfc2e981d17f2ba88dc8420b351e9159626.png" alt="" width = 45px>
+                <p class="mb-0 px-3">It's not a good day</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <p class="mb-0 px-3">I feel positive</p>
+                <img src="https://www.mychrysalis.me/assets/smile-495bed1bbba9650b6ff0c425b9d52538d7d6df3434602bc486016cb2fe6ae001.png" alt="" width = 45px>
+              </div>
             </div>
             <%= f.input :emotion_level, as: :range, input_html:{ min:"1", max:"7"}, label: false %>
           </div>
