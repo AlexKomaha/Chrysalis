@@ -11,6 +11,7 @@ User.create!(email: "alison@chrysalis.com", password: "123123", first_name: "Ali
 User.create!(email: "sae@chrysalis.com", password: "123123", first_name: "Sae", last_name: "Matsuda")
 User.create!(email: "alex@chrysalis.com", password: "123123", first_name: "Alex", last_name: "Komaha")
 User.create!(email: "toshiro@chrysalis.com", password: "123123", first_name: "Toshiro", last_name: "Tanaka")
+User.create!(email: "ayumi@chrysalis.com", password: "123123", first_name: "Ayumi", last_name: "Yamashita")
 
 puts "#{User.count} users created"
 
