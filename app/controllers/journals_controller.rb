@@ -19,8 +19,10 @@ class JournalsController < ApplicationController
     @score = tm.analyze(@journal.content || @journal.rich_content.to_plain_text)
     if @score.negative?
       @score = 30
-    else
+    elsif @score <= 70
       @score += 30
+    else
+      @score
     end
   end
 
