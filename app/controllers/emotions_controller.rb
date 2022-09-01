@@ -1,7 +1,7 @@
 class EmotionsController < ApplicationController
   def index
     @emotions = policy_scope(Emotion)
-    @emotion = Emotion.find_by(created_at: (Time.now.beginning_of_day..Time.now.end_of_day)) || Emotion.new
+    @emotion = @emotions.find_by(created_at: (Time.now.beginning_of_day..Time.now.end_of_day)) || Emotion.new
     # Scope your query to the dates being shown:
     start_date = params.fetch(:start_date, Date.today).to_date
     @emotions = @emotions.where(created_at: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
