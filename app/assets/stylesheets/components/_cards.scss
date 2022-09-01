@@ -8,6 +8,18 @@
   border: none;
 }
 
+.resource-card {
+  background-color: #FAFAFA;
+  list-style: none;
+  color: black;
+  border-radius: 15px;
+  .resource-link strong a {
+    color: rgb(7, 183, 7);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
 .card-quote {
   background-color: #FAFAFA;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -62,7 +74,7 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
   border-radius: 10px;
   margin: 20px;
   &:hover {

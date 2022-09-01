@@ -34,10 +34,21 @@
         <%= image_tag "social-care.png", class: "articles-icon" %>
         <h3 class="px-3 m-0">Resources for you</h3>
       </div>
-      <p class="pb-2">It's important to know that you are <strong>not alone</strong> and that there are places that will help you in person when you are ready for that next step. Check out the map below for resources nearby.</p>
+      <p class="pt-4 pb-2">It's important to know that you are <strong>not alone</strong> and that there are places that will help you in person when you are ready for that next step. Check out the map below for resources nearby.</p>
       <p>Find services that can with help with finances, getting back into work, and professional mental health advice.</p>
     </div>
     <%= render "pages/map" %>
     <%# Iterate over the resources in the db and write an unordered list with the details %>
-  </div>
+    <ul class="py-5 px-5 text-center">
+      <h4><strong>Details</strong></h4>
+      <% @locations.each do |location| %>
+        <li class="resource-card my-3 py-2">
+          <h6><%= location.name %></h6>
+          <p><%= location.address %></p>
+          <p></strong><%= location.phone_number %></p>
+        <p class="resource-link"><i class="fa-solid fa-arrow-up-right-from-square"></i>  <strong><%= link_to "Website", location.url %></strong></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
 </div>
