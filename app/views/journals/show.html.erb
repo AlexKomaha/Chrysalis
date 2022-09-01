@@ -5,7 +5,8 @@
 </div>
 <div class='container mb-5 pb-5'>
   <div class='container d-flex justify-content-center'>
-    <div class="content-wrapper emotion-<%= @emotion_of_day.emotion_level if @emotion_of_day %>">
+    <%# emotion-<%= @emotion_of_day.emotion_level if @emotion_of_day %>
+    <div class="content-wrapper emotion-border-<%= @emotion_of_day.emotion_level if @emotion_of_day %>">
       <h6 class="mb-3"><%= @journal.created_at.strftime('%A %d %I:%M%p') %></h6>
       <p>
         <% if @journal.content %>

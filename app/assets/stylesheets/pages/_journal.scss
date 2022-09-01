@@ -72,3 +72,38 @@
 .dropdown-menu>li>a {
   text-align: center;
 }
+
+.emotion-border-1 {
+  border: 2px solid $emotion-1;
+  box-shadow: $emotion-1 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, $emotion-1 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, $emotion-1 20px -20px;
+}
+
+.emotion-border-2 {
+  border: 2px solid $emotion-2;
+  box-shadow: $emotion-2 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, $emotion-2 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, $emotion-2 20px -20px;
+}
+
+.emotion-border-3 {
+  border: 2px solid $emotion-3;
+  box-shadow: $emotion-3 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, $emotion-3 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, $emotion-3 20px -20px;
+}
+
+.emotion-border-4 {
+  border: 2px solid $emotion-4;
+  box-shadow: $emotion-4 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, $emotion-4 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, $emotion-4 20px -20px;
+}
+
+.emotion-border-5 {
+  border: 2px solid $emotion-5;
+  box-shadow: $emotion-5 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, $emotion-5 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, $emotion-5 20px -20px;
+}
+
+.emotion-border-6 {
+  border: 2px solid $emotion-6;
+  box-shadow: $emotion-6 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, $emotion-6 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, $emotion-6 20px -20px;
+}
+
+.emotion-border-7 {
+  border: 2px solid $emotion-7;
+  box-shadow: $emotion-7 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, $emotion-7 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, $emotion-7 20px -20px;
+}
