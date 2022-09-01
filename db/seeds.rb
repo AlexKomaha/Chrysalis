@@ -287,6 +287,15 @@ User.all.each do |user|
     )
   end
 
+  2.times do
+    UserGoal.create!(
+      description: "Call my grandma",
+      user: user,
+      status: "done",
+      created_at: Date.new(2022, rand(7..9), rand(1..30))
+    )
+  end
+
   4.times do
     UserGoal.create!(
       description: "Watch TV with my mother",
@@ -368,6 +377,15 @@ User.all.each do |user|
     )
   end
 
+  1.times do
+    UserGoal.create!(
+      description: "Call my friend and see if he wants to come over",
+      user: user,
+      status: "done",
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
+  end
+
   3.times do
     UserGoal.create!(
       description: "Take out the trash",
@@ -422,6 +440,24 @@ User.all.each do |user|
     )
   end
 
+  4.times do
+    UserGoal.create!(
+      description: "Arrange a get-together with a friend",
+      user: user,
+      status: "done",
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
+  end
+
+  4.times do
+    UserGoal.create!(
+      description: "Arrange a get-together with a friend",
+      user: user,
+      status: "inactive",
+      created_at: Date.new(2022, rand(7..8), rand(1..31))
+    )
+  end
+
   puts "#{UserGoal.count} user goals created"
 end
 
@@ -448,6 +484,9 @@ Article.create!(title: "How to Deal With Anxiety at Work", url: "https://www.ver
 Article.create!(title: "Highly Effective Strategies to Harness Motivation", url: "https://www.verywellmind.com/highly-effective-strategies-to-harness-motivation-5120217", image_url: "https://www.verywellmind.com/thmb/KrdwmZymZdrlfFhsum6peQGwPsU=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-12238600882-e59cba81dc2844728d2df78ec2e769b5.jpg", author: "Wendy Rose Gould")
 Article.create!(title: "'I Hate Myself': 8 Ways to Combat Self-Hatred", url: "https://www.verywellmind.com/i-hate-myself-ways-to-combat-self-hatred-5094676", image_url: "https://www.verywellmind.com/thmb/76EclCjgHUjs0zoRjOYbC6csxgc=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/i-hate-myself-ways-to-combat-self-hatred-5094676-a9afa54a8c4744a69171c8c6b7c6a8d7.png", author: "Arlin Cuncic")
 Article.create!(title: "What You Can Do to Cope With Anxiety", url: "https://www.verywellmind.com/manage-your-anxiety-2584184", image_url: "https://www.verywellmind.com/thmb/eLSvodLhLzyHiRTqAYnmcyD7s4w=/614x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/manage-your-anxiety-2584184-01-07daf91ba6de41d19f827cf65ceef07a.png", author: "Katharina Star, PhD")
+Article.create!(title: "I Hate My Dad: How to Cope When You Feel This Way", url: "https://www.verywellmind.com/i-hate-my-dad-how-to-cope-when-you-feel-this-way-5203891", image_url: "https://www.verywellmind.com/thmb/VfVPdGQ5tm8LWihzTQtF6ZK8Rik=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1309404530-44963d501f08470c8ea590c182c2ac7e.jpg", author: "Sanjana Gupta")
+Article.create!(title: "What Is an 'I Can Do Anything' Mindset?", url: "https://www.verywellmind.com/i-can-do-anything-mindset-5220083", image_url: "https://www.verywellmind.com/thmb/zp7uTMNQDTV3N6cI9HQjkiQJzAw=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-687595763-92e47e2f94fb45ccb46f42c5bfeb59bf.jpg", author: "Barbara Field")
+Article.create!(title: "The Mental Health Benefits of Making Your Bed", url: "https://www.verywellmind.com/mental-health-benefits-of-making-your-bed-5093540", image_url: "https://www.verywellmind.com/thmb/lxI28Ycr97NkV-E7qXfRfa53sgw=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/mental-health-benefits-of-making-your-bed-5093540-notext-968aa16c003245e2ab80e50b5199cadc.png", author: "Sarah Vanbuskirk")
 
 puts "#{Article.count} articles created"
 
@@ -459,12 +498,12 @@ Location.destroy_all
 puts "Resource location database cleaned"
 puts "Getting location data"
 
-Location.create!(name: "Tama Youth Support Station", address: "183-2 Shimo, Fussa, Tokyo", phone_number: "042-513-0577", url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1898x10000:format=png/path/sb56fb9711de25eb8/image/i7dca508bca99b086/version/1621991842/image.png")
 Location.create!(name: "Tachikawa Wakasa Support Station", address: "2-9-22 Takamatsucho, Tachikawa-shi, Tokyo", phone_number: "042-529-3378", url: "https://public.sodateage.net/yss/tachikawa/")
 Location.create!(name: "Shinjuku Youth Support Station", address: "2-4-7 Nishiwaseda, Shinjuku, Tokyo", phone_number: "03-6380-2288", url: "https://syss.roukyou.gr.jp/")
 Location.create!(name: "Setagaya Youth Support Station", address: "4-3-1 Taishido, Setagaya, Tokyo", phone_number: "03-5779-8222", url: "https://static.toriaez.jp/uploads/images/r1042/logo-20220725151152.png")
 Location.create!(name: "Nerima Youth Support Station", address: "4-16-9 Kasuga, Nerima, Tokyo", phone_number: "03-5848-8341", url: "https://kyodonet-nerima.net/")
 Location.create!(name: "JOBOTA", address: "1-11-1 Omorikita, Ota, Tokyo", phone_number: "03-6423-0251", url: "https://www.jobota.net/")
 Location.create!(name: "Shinjuku City", address: "5-18-21 Shinjuku, Shinjuku, Tokyo", phone_number: "03-5273-3853", url: "http://www.city.shinjuku.lg.jp/content/000148633.png")
+Location.create!(name: "Tama Youth Support Station", address: "183-2 Shimo, Fussa, Tokyo", phone_number: "042-513-0577", url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1898x10000:format=png/path/sb56fb9711de25eb8/image/i7dca508bca99b086/version/1621991842/image.png")
 
 puts "#{Location.count} resource locations created"
