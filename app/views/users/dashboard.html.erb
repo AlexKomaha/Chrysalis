@@ -57,9 +57,11 @@
   <div class="container d-flex justify-content-center">
     <div class="container d-flex justify-content-end col-6 pt-3">
       <div class="card card-dash-goals p-3 mt-3">
-        <%#= image_tag "target.png", class: "dash-icon" %>
-        <h4 class="text-left mt-4 ms-5"><strong>Today's objectives</strong></h4>
-        <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat-dash" %>
+        <div class="d-flex justify-content-center">
+          <%= image_tag "target.png", class: "dash-icon" %>
+          <h4 class="text-left mt-4 ms-5"><strong>Today's objectives</strong></h4>
+          <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat-dash" %>
+        </div>
         <div>
           <%= render "users/goal_cards" %>
         </div>
@@ -99,6 +101,20 @@
         <%= link_to "View more", emotions_path, class: "btn btn-flat-dash" %>
         <%= render "users/emotions_dashboard", emotions: @emotions %>
       </div>
+    </div>
+  </div>
+</div>
+<div class="card card-dash-goals p-4 m-3">
+  <div>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex flex-row align-items-center">
+        <%= image_tag "target.png", class: "dash-icon" %>
+        <h4 class="m-0 px-2"><strong>Today's objectives</strong></h4>
+      </div>
+      <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat-dash" %>
+    </div>
+    <div>
+      <%= render "users/goal_cards" %>
     </div>
   </div>
 </div>
