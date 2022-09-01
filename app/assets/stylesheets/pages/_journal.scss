@@ -9,12 +9,14 @@
   margin: 0.8em 0px;
   text-align: center;
   padding: 5px 35px;
+  border-radius: 5px;
 }
 
 .journal-box {
   background-color: $vibrant-green;
   width: 800px;
   height: auto;
+  border-radius: 5px;
 }
 
 .journals {
@@ -47,7 +49,7 @@
   height: auto;
   position: relative;
   top: 47px;
-  left: -63px;
+  left: -70px;
 }
 
 .content-wrapper {
@@ -55,6 +57,7 @@
   justify-content: center;
   padding: 2em;
   margin-bottom: 60px;
+  border-radius: 5px;
 }
 
 .add-journal-wrapper {

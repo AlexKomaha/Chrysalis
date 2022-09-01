@@ -6,7 +6,8 @@
 <div class="row">
   <div class="col-6 pt-5 mx-5 pb-5">
     <div class="text-center">
-      <h5>Read more to learn more</h5>
+      <h3>Read more to learn more</h3>
+      <%#= image_tag "open-book.png", class: "articles-icon" %>
     </div>
     <div class='container cards'>
       <% @articles.each do |article| %>
@@ -26,9 +27,13 @@
     </div>
   </div>
   <div class="col-5 pt-5">
-    <div class="text-center">
-      <h5>SOMETHING</h5>
+    <div class="text-center pb-3">
+      <h3>Resources for you</h3>
+      <%#= image_tag "social-care.png", class: "articles-icon" %>
+      <p class="pb-2">It's important to know that you are <strong>not alone</strong> and that there are places that will help you in person when you are ready for that next step. Check out the map below for resources nearby.</p>
+      <p>Find services that can with help with finances, getting back into work, and professional mental health advice.</p>
     </div>
     <%= render "pages/map" %>
+    <%# Iterate over the resources in the db and write an unordered list with the details %>
   </div>
 </div>
