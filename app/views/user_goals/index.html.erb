@@ -16,7 +16,7 @@
         <div class="progress mb-5">
           <% done = user_goals.count(&:done?) %>
           <% total = user_goals.count %>
-          <div class="progress-bar progress-bar-striped progress-bar-<%= @colors[index % 4] %>" role="progressbar" aria-label="Default striped example" style=" color: black; width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> / <%= total %></div>
+          <div class="progress-bar progress-bar-striped progress-bar-<%= @colors[index % 4] %>" role="progressbar" aria-label="Default striped example" style=" color: black; width: <%= (done/total.to_f) * 100 %>%" aria-valuenow=<%= %> aria-valuemin="0" aria-valuemax="<%= total %>"><%= done %> out of <%= total %> times</div>
         </div>
         <%# end %>
       <% end %>
