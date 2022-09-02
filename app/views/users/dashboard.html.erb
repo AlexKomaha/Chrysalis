@@ -1,130 +1,134 @@
 <%# Quote %>
 <div class="container">
   <div class="row justify-content-center align-items-center h-100 mt-3" data-controller="quotes">
-    <div class="card" style="border-radius: 15px;">
-      <div class="card-body">
-        <figure class="text-center mb-0">
-          <blockquote class="blockquote">
-            <p class="pb-3">
-              <i class="fas fa-quote-left fa-xs"></i>
-              <span class="lead font-italic" data-quotes-target="quotes"><%= @quotes %></span>
-              <i class="fas fa-quote-right fa-xs"></i>
-            </p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0" data-quotes-target="author">
-            <%= @author %>
-          </figcaption>
-        </figure>
+    <div class="col">
+      <div class="card" style="border-radius: 15px;">
+        <div class="card-body">
+          <figure class="text-center mb-0">
+            <blockquote class="blockquote">
+              <p class="pb-3">
+                <i class="fas fa-quote-left fa-xs"></i>
+                <span class="lead font-italic" data-quotes-target="quotes"><%= @quotes %></span>
+                <i class="fas fa-quote-right fa-xs"></i>
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0" data-quotes-target="author">
+              <%= @author %>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center mt-3 g-3">
     <%# Journals %>
-    <div class="card col-4 p-3 card-dash">
-      <h4><strong>Your journal</strong></h4>
-      <% if @journals.any? %>
-        <h6>Here's your journal from today:</h6>
-      <% end %>
-      <% if @journals.empty? %>
-        <p>You haven't written a journal yet!</p>
-        <div>
-          <%= link_to "Add journal", new_journal_path, class: "btn btn-flat-save-dash" %>
-        </div>
-      <% else %>
-        <% @journals.each do |journal| %>
-          <p class="mt-2"><%= link_to journal.title, journal_path(journal), class: "text-muted"%></p>
+    <div class="col">
+      <div class="card p-3 card-dash">
+        <h4><strong>Your journal</strong></h4>
+        <% if @journals.any? %>
+          <h6>Here's your journal from today:</h6>
         <% end %>
-      <% end %>
+        <% if @journals.empty? %>
+          <p>You haven't written a journal yet!</p>
+          <div>
+            <%= link_to "Add journal", new_journal_path, class: "btn btn-flat-save-dash" %>
+          </div>
+        <% else %>
+          <% @journals.each do |journal| %>
+            <p class="mt-2"><%= link_to journal.title, journal_path(journal), class: "text-muted"%></p>
+          <% end %>
+        <% end %>
+      </div>
     </div>
     <%# Streak %>
-    <div class="card col-4 p-3 card-dash">
-      <h4><strong>Your streak</strong></h4>
-      <div class="d-flex justify-content-center">
-        <%= image_tag "favorite.png", class: "streak-icon" %>
+    <div class="col">
+      <div class="card p-3 card-dash">
+        <h4><strong>Your streak</strong></h4>
+        <div class="d-flex justify-content-center">
+          <%= image_tag "favorite.png", class: "streak-icon" %>
+        </div>
+        <p class="mt-3">You are on a <strong><%= current_user.streak_count %></strong> day streak</p>
       </div>
-      <p class="mt-3">You are on a <strong><%= current_user.streak_count %></strong> day streak</p>
     </div>
     <%# Emotions %>
-    <div class="card col-4 p-3 card-dash">
-      <h4><strong>Your emotion</strong></h4>
-      <% if @emotion.any? %>
-        <h6>Here's your emotion from today:</h6>
-      <% end %>
-      <% if @emotion.empty? %>
-        <p>You haven't added an emotion yet!</p>
-        <div>
-          <%= link_to "Add emotion", emotions_path, class: "btn btn-flat-save-dash" %>
-        </div>
-      <% else %>
-        <% @emotion.each do |emotion| %>
-          <%= link_to "Your day on the calendar", emotions_path, class: "text-muted"%>
+    <div class="col">
+      <div class="card p-3 card-dash">
+        <h4><strong>Your emotion</strong></h4>
+        <% if @emotion.any? %>
+          <h6>Here's your emotion from today:</h6>
         <% end %>
-      <% end %>
+        <% if @emotion.empty? %>
+          <p>You haven't added an emotion yet!</p>
+          <div>
+            <%= link_to "Add emotion", emotions_path, class: "btn btn-flat-save-dash" %>
+          </div>
+        <% else %>
+          <% @emotion.each do |emotion| %>
+            <%= link_to "Your day on the calendar", emotions_path, class: "text-muted"%>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
   <%# Today's goals %>
-  <div class="row">
-    <div class="container d-flex justify-content-center">
-      <div class="container d-flex justify-content-end col-6 pt-3">
-        <div class="card card-dash-goals p-4 mt-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-row align-items-center">
-              <%= image_tag "target.png", class: "dash-icon" %>
-              <h4 class="m-0 px-2"><strong>Today's objectives</strong></h4>
-            </div>
-            <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat-dash" %>
+  <div class="row mt-3">
+    <div class="col-6 justify-content-center">
+      <div class="card card-dash-goals p-4 mt-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-row align-items-center">
+            <%= image_tag "target.png", class: "dash-icon" %>
+            <h4 class="m-0 px-2"><strong>Today's objectives</strong></h4>
           </div>
-          <div>
-            <%= render "users/goal_cards" %>
-          </div>
+          <%= link_to "Add a goal", new_user_goal_path, class: "btn btn-flat-dash" %>
+        </div>
+        <div>
+          <%= render "users/goal_cards" %>
         </div>
       </div>
-      <%# Recent goals %>
-      <div class="container col-6 pt-3">
-        <div class="card card-dash-goals p-4 mt-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-row align-items-center">
-              <%= image_tag "success.png", class: "dash-icon" %>
-              <h4 class="m-0 px-2"><strong>My recent goals</strong></h4>
-            </div>
-            <%= link_to "View more", user_goals_path, class: "btn btn-flat-dash" %>
+    </div>
+    <%# Recent goals %>
+    <div class="col-6">
+      <div class="card card-dash-goals p-4 mt-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-row align-items-center">
+            <%= image_tag "success.png", class: "dash-icon" %>
+            <h4 class="m-0 px-2"><strong>My recent goals</strong></h4>
           </div>
-          <div class="container">
-            <%= render "users/recent" %>
-          </div>
+          <%= link_to "View more", user_goals_path, class: "btn btn-flat-dash" %>
+        </div>
+        <div>
+          <%= render "users/recent" %>
         </div>
       </div>
     </div>
   </div>
   <%# Article %>
-  <div class="row mb-5 pb-5">
-    <div class="container d-flex justify-content-center">
-      <div class="container d-flex justify-content-end col-6 pt-3">
-        <div class="card card-dash-goals p-4 mt-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-row align-items-center">
-              <%= image_tag "article.png", class: "dash-icon" %>
-              <h4 class="m-0 px-2"><strong>Latest article</strong></h4>
-            </div>
-            <%= link_to "View more", articles_path, class: "btn btn-flat-dash" %>
+  <div class="row mb-5 pb-5 mt-3">
+    <div class=" justify-content-center col-6">
+      <div class="card card-dash-goals p-4 mt-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-row align-items-center">
+            <%= image_tag "article.png", class: "dash-icon" %>
+            <h4 class="m-0 px-2"><strong>Latest article</strong></h4>
           </div>
-          <div class="container">
-            <%= render "users/newest_article" %>
-          </div>
+          <%= link_to "View more", articles_path, class: "btn btn-flat-dash" %>
+        </div>
+        <div>
+          <%= render "users/newest_article" %>
         </div>
       </div>
-      <%# Calendar %>
-      <div class="container col-6 pt-3">
-        <div class="card card-dash-goals p-4 mt-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-row align-items-center">
-              <%= image_tag "calendar.png", class: "dash-icon" %>
-              <h4 class="m-0 px-2"><strong>This month</strong></h4>
-            </div>
-            <%= link_to "View more", emotions_path, class: "btn btn-flat-dash" %>
+    </div>
+    <%# Calendar %>
+    <div class="col-6">
+      <div class="card card-dash-goals p-4 mt-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-row align-items-center">
+            <%= image_tag "calendar.png", class: "dash-icon" %>
+            <h4 class="m-0 px-2"><strong>This month</strong></h4>
           </div>
-          <%= render "users/emotions_dashboard", emotions: @emotions %>
+          <%= link_to "View more", emotions_path, class: "btn btn-flat-dash" %>
         </div>
+        <%= render "users/emotions_dashboard", emotions: @emotions %>
       </div>
     </div>
   </div>
